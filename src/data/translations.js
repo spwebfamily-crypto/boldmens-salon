@@ -121,6 +121,14 @@ export const translations = {
       tag: "Nosso universo",
       title: "Bem-vindo à BoldMen's Salon, referência em São Pedro do Estoril.",
       description: "Selecionamos peças de design, iluminação e obras que traduzem a atmosfera do clube. A galeria mostra o lounge, as salas de atendimento, o speakeasy e detalhes feitos sob medida.",
+      items: [
+        { id: 'space', src: '/galeria/espaco.jpg', alt: "Lounge principal BoldMen's" },
+        { id: 'cut', src: '/galeria/corte.jpg', alt: 'Corte de cabelo em execução' },
+        { id: 'cut-secondary', src: '/galeria/corte2.jpg', alt: 'Corte de cabelo em detalhe' },
+        { id: 'details', src: '/galeria/detalhesprodutos.jpg', alt: 'Detalhes de produtos exclusivos' },
+        { id: 'details-secondary', src: '/galeria/detalhes.jpg', alt: 'Texturas e acabamentos do espaço' },
+        { id: 'cafe', src: '/galeria/cafe.jpg', alt: 'Café servido aos clientes' },
+      ]
     },
     secret: {
       title: "Secret",
@@ -318,6 +326,14 @@ export const translations = {
       tag: "Our universe",
       title: "Welcome to BoldMen's Salon, a reference in São Pedro do Estoril.",
       description: "We select design pieces, lighting and works that translate the club's atmosphere. The gallery shows the lounge, service rooms, speakeasy and custom-made details.",
+      items: [
+        { id: 'space', src: '/galeria/espaco.jpg', alt: "BoldMen's main lounge" },
+        { id: 'cut', src: '/galeria/corte.jpg', alt: 'Haircut in progress' },
+        { id: 'cut-secondary', src: '/galeria/corte2.jpg', alt: 'Haircut detail' },
+        { id: 'details', src: '/galeria/detalhesprodutos.jpg', alt: 'Exclusive product details' },
+        { id: 'details-secondary', src: '/galeria/detalhes.jpg', alt: 'Space textures and finishes' },
+        { id: 'cafe', src: '/galeria/cafe.jpg', alt: 'Coffee served to clients' },
+      ]
     },
     secret: {
       title: "Secret",
@@ -515,6 +531,14 @@ export const translations = {
       tag: "Nuestro universo",
       title: "Bienvenido a BoldMen's Salon, referencia en São Pedro do Estoril.",
       description: "Seleccionamos piezas de diseño, iluminación y obras que traducen la atmósfera del club. La galería muestra el salón, las salas de atención, el speakeasy y detalles hechos a medida.",
+      items: [
+        { id: 'space', src: '/galeria/espaco.jpg', alt: "Salón principal BoldMen's" },
+        { id: 'cut', src: '/galeria/corte.jpg', alt: 'Corte de cabello en ejecución' },
+        { id: 'cut-secondary', src: '/galeria/corte2.jpg', alt: 'Detalle de corte de cabello' },
+        { id: 'details', src: '/galeria/detalhesprodutos.jpg', alt: 'Detalles de productos exclusivos' },
+        { id: 'details-secondary', src: '/galeria/detalhes.jpg', alt: 'Texturas y acabados del espacio' },
+        { id: 'cafe', src: '/galeria/cafe.jpg', alt: 'Café servido a los clientes' },
+      ]
     },
     secret: {
       title: "Secret",
@@ -712,6 +736,14 @@ export const translations = {
       tag: "Наша вселенная",
       title: "Добро пожаловать в BoldMen's Salon, эталон в Сан-Педру-ду-Эшторил.",
       description: "Мы выбираем дизайнерские элементы, освещение и произведения, которые передают атмосферу клуба. Галерея показывает лаунж, комнаты обслуживания, спикизи и детали, сделанные на заказ.",
+      items: [
+        { id: 'space', src: '/galeria/espaco.jpg', alt: "Главный лаунж BoldMen's" },
+        { id: 'cut', src: '/galeria/corte.jpg', alt: 'Стрижка в процессе' },
+        { id: 'cut-secondary', src: '/galeria/corte2.jpg', alt: 'Детали стрижки' },
+        { id: 'details', src: '/galeria/detalhesprodutos.jpg', alt: 'Детали эксклюзивных продуктов' },
+        { id: 'details-secondary', src: '/galeria/detalhes.jpg', alt: 'Текстуры и отделка пространства' },
+        { id: 'cafe', src: '/galeria/cafe.jpg', alt: 'Кофе для клиентов' },
+      ]
     },
     secret: {
       title: "Secret",

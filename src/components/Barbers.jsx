@@ -42,6 +42,7 @@ function Barbers() {
                   alt={member.name}
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div
                   className="absolute inset-0 bg-gradient-to-t from-white/70 via-transparent"

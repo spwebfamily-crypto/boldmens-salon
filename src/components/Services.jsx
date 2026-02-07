@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import { motion, AnimatePresence } from "framer-motion";
 import Modal from "./Modal";
 import { useTranslation } from "../contexts/LanguageContext";
 
@@ -83,52 +84,86 @@ function Services({ items = [] }) {
         </div>
       </div>
 
-      <Modal
-        isOpen={!!selectedService}
-        onClose={() => setSelectedService(null)}
-      >
-        {selectedService && (
-          <div className="p-8 md:p-10 dark:text-white">
-            <div className="mb-6 flex items-start justify-between gap-4">
-              <div>
-                <span className="inline-block rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-orange-600 dark:border-orange-900 dark:bg-orange-900/20 dark:text-orange-400">
-                  {selectedService.duration}
-                </span>
-                <h3 className="mt-3 text-2xl font-semibold text-neutral-900 dark:text-white md:text-3xl">
-                  {selectedService.title}
-                </h3>
-              </div>
-              <p className="text-xl font-semibold text-neutral-900 dark:text-white">
-                {selectedService.price}
-              </p>
-            </div>
-            <div className="space-y-6">
-              <p className="text-base leading-relaxed text-neutral-600 dark:text-neutral-300">
-                {selectedService.description}
-              </p>
-              <div className="rounded-2xl bg-neutral-50 p-5 dark:bg-neutral-800">
-                <h4 className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-neutral-900 dark:text-white">
-                  {t.services.included}
-                </h4>
-                <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
-                  {t.services.includedItems.map((item, index) => (
-                    <li key={index} className="flex items-center gap-3">
-                      <span className="h-1.5 w-1.5 rounded-full bg-orange-500" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <a
-                href={bookingUrl}
-                className="flex w-full items-center justify-center rounded-full bg-neutral-900 py-4 text-sm font-semibold uppercase tracking-[0.35em] text-white transition hover:bg-orange-600 dark:bg-white dark:text-neutral-900 dark:hover:bg-orange-500 dark:hover:text-white"
+      <AnimatePresence>
+        {!!selectedService && (
+          <Modal
+            isOpen={!!selectedService}
+            onClose={() => setSelectedService(null)}
+          >
+            <motion.div 
+              className="p-8 md:p-10 dark:text-white"
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+            >
+              <motion.div 
+                className="mb-6 flex items-start justify-between gap-4"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1, duration: 0.3 }}
               >
-                {t.services.bookNow}
-              </a>
-            </div>
-          </div>
+                <div>
+                  <span className="inline-block rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-orange-600 dark:border-orange-900 dark:bg-orange-900/20 dark:text-orange-400">
+                    {selectedService.duration}
+                  </span>
+                  <h3 className="mt-3 text-2xl font-semibold text-neutral-900 dark:text-white md:text-3xl">
+                    {selectedService.title}
+                  </h3>
+                </div>
+                <p className="text-xl font-semibold text-neutral-900 dark:text-white">
+                  {selectedService.price}
+                </p>
+              </motion.div>
+              <div className="space-y-6">
+                <motion.p 
+                  className="text-base leading-relaxed text-neutral-600 dark:text-neutral-300"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2, duration: 0.3 }}
+                >
+                  {selectedService.description}
+                </motion.p>
+                <motion.div 
+                  className="rounded-2xl bg-neutral-50 p-5 dark:bg-neutral-800"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3, duration: 0.3 }}
+                >
+                  <h4 className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-neutral-900 dark:text-white">
+                    {t.services.included}
+                  </h4>
+                  <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+                    {t.services.includedItems.map((item, index) => (
+                      <motion.li 
+                        key={index} 
+                        className="flex items-center gap-3"
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.4 + index * 0.05, duration: 0.3 }}
+                      >
+                        <span className="h-1.5 w-1.5 rounded-full bg-orange-500" />
+                        {item}
+                      </motion.li>
+                    ))}
+                  </ul>
+                </motion.div>
+                <motion.a
+                  href={bookingUrl}
+                  className="flex w-full items-center justify-center rounded-full bg-neutral-900 py-4 text-sm font-semibold uppercase tracking-[0.35em] text-white transition hover:bg-orange-600 dark:bg-white dark:text-neutral-900 dark:hover:bg-orange-500 dark:hover:text-white"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5, duration: 0.3 }}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  {t.services.bookNow}
+                </motion.a>
+              </div>
+            </motion.div>
+          </Modal>
         )}
-      </Modal>
+      </AnimatePresence>
     </section>
   );
 }

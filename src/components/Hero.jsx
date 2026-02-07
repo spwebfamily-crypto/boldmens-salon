@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import heroVideo from "../../vdo/Boldmens logo.mp4";
 import Modal from "./Modal";
 import { useTranslation } from "../contexts/LanguageContext";
 
@@ -10,6 +9,7 @@ const heroImage =
 
 function Hero() {
   const [showPopup, setShowPopup] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
   const parallaxRef = useRef(null);
   const t = useTranslation();
 
@@ -21,7 +21,7 @@ function Hero() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -132,13 +132,16 @@ function Hero() {
           transition={{ delay: 0.5, duration: 0.8 }}
         >
           <article className="relative flex-1 overflow-hidden rounded-[32px] border border-neutral-200 bg-white/80 shadow-lg aspect-[9/16] max-h-[400px]">
+            {!videoLoaded && <div className="h-full w-full bg-neutral-100 animate-pulse" />}
             <video
-              src={heroVideo}
+              src="/vdo/Boldmens logo.mp4"
               className="h-full w-full object-cover"
               autoPlay
               loop
               muted
               playsInline
+              preload="metadata"
+              onLoadedData={() => setVideoLoaded(true)}
             />
             <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-transparent to-white/90" />
           </article>
@@ -150,13 +153,16 @@ function Hero() {
           transition={{ delay: 0.4, duration: 0.8 }}
         >
           <article className="relative flex-1 overflow-hidden rounded-[40px] border border-neutral-200 bg-white/80 shadow-lg">
+            {!videoLoaded && <div className="h-full w-full bg-neutral-100 animate-pulse" />}
             <video
-              src={heroVideo}
+              src="/vdo/Boldmens logo.mp4"
               className="h-full w-full object-cover"
               autoPlay
               loop
               muted
               playsInline
+              preload="metadata"
+              onLoadedData={() => setVideoLoaded(true)}
             />
             <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-transparent to-white/90" />
           </article>

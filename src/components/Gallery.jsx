@@ -64,6 +64,7 @@ function Gallery({ items = [] }) {
                   alt={item.alt}
                   className="aspect-[4/5] h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   loading="lazy"
+                  decoding="async"
                 />
                 <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-6 text-sm text-white">
                   {item.alt}

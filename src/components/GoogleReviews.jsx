@@ -9,10 +9,13 @@ function GoogleReviews() {
     const script = document.createElement('script');
     script.src = 'https://static.elfsight.com/platform/platform.js';
     script.async = true;
+    script.defer = true;
     document.body.appendChild(script);
 
     return () => {
-      document.body.removeChild(script);
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
     };
   }, []);
 
