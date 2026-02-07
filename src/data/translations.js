@@ -150,6 +150,17 @@ export const translations = {
       ],
       items: [
         {
+          id: 'combo-haircut-shave',
+          title: 'Corte de cabelo & Barbear clássico',
+          description: 'Desfrute de um cuidado completo com corte de cabelo personalizado e barbear clássico com toalha quente. Cada detalhe é finalizado com precisão, contornos feitos à navalha e acabamento elegante. Utilizamos produtos selecionados para valorizar seu estilo, respeitando sua personalidade.',
+          duration: '1h 20min',
+          price: '€29',
+          includedServices: [
+            { name: 'Barbear clássico com toalha quente', duration: '30 min' },
+            { name: 'Corte de cabelo', duration: '50 min' }
+          ]
+        },
+        {
           id: 'haircut',
           title: 'Corte signature',
           description: 'Consultoria inicial, corte estruturado com tesoura e finalização com produtos autorais Bold Mens.',
@@ -172,10 +183,21 @@ export const translations = {
         },
         {
           id: 'brows-straight-razor',
-          title: 'Sobrancelhas com navalha',
-          description: 'Design, alinhamento e finalização com navalha para um olhar preciso.',
+          title: 'Sobrancelhas (navalha)',
+          description: 'Aparo, Alinhamento e Finalização de Sobrancelhas.',
           duration: '15 min',
-          price: '€15',
+          price: '€5',
+        },
+        {
+          id: 'combo-brows-contours',
+          title: 'Sobrancelha (navalha) & Contornos',
+          description: 'Aparo, Alinhamento e finalização de Sobrancelhas & Acabamentos de Cabelo.',
+          duration: '30 min',
+          price: '€8',
+          includedServices: [
+            { name: 'Sobrancelhas (navalha)', duration: '15 min' },
+            { name: 'Acabamentos de cabelos', duration: '15 min' }
+          ]
         },
         {
           id: 'buzz-cut',

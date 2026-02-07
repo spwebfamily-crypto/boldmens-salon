@@ -50,32 +50,38 @@ function Services({ items = [] }) {
               tabIndex={0}
               className="group relative cursor-pointer overflow-hidden rounded-[32px] border border-neutral-200 bg-white p-8 transition duration-500 hover:-translate-y-1 hover:border-orange-500 hover:shadow-xl dark:border-neutral-800 dark:bg-neutral-900"
             >
-              <div
-                className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100"
-                aria-hidden="true"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-transparent to-orange-100 dark:from-orange-900/20 dark:to-orange-900/10" />
-              </div>
               <div className="relative flex flex-col gap-4">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-2xl font-semibold text-neutral-900 dark:text-white">
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="text-2xl font-semibold text-neutral-900 dark:text-white uppercase">
                     {service.title}
                   </h3>
-                  <span className="rounded-full border border-orange-200 bg-orange-50 px-4 py-1 text-xs uppercase tracking-[0.35em] text-orange-600 dark:border-orange-900 dark:bg-orange-900/20 dark:text-orange-400">
-                    {service.duration}
-                  </span>
+                  <div className="flex flex-col items-end gap-1">
+                    <span className="text-2xl font-bold text-orange-600 dark:text-orange-500">{service.price}</span>
+                    <span className="text-xs text-neutral-500 dark:text-neutral-400">{service.duration}</span>
+                  </div>
                 </div>
-                <p className="text-sm text-neutral-700 dark:text-neutral-400">
+                <p className="text-sm text-neutral-700 dark:text-neutral-400 leading-relaxed">
                   {service.description}
                 </p>
-                <div className="mt-6 flex items-center justify-between text-sm font-semibold uppercase tracking-[0.3em] text-neutral-900 dark:text-white">
-                  <span>{service.price}</span>
+                {service.includedServices && (
+                  <div className="mt-2 space-y-2">
+                    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-600 dark:text-neutral-500">Itens inclusos</p>
+                    {service.includedServices.map((item, idx) => (
+                      <div key={idx} className="flex items-center justify-between text-sm">
+                        <span className="text-neutral-700 dark:text-neutral-400 uppercase text-xs tracking-wider">{item.name}</span>
+                        <span className="text-neutral-500 dark:text-neutral-500 text-xs">{item.duration}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                <div className="mt-4">
                   <a
                     href={bookingUrl}
                     onClick={(e) => e.stopPropagation()}
-                    className="text-orange-600 dark:text-orange-400 transition hover:text-orange-500"
+                    className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-orange-600 dark:text-orange-400 transition hover:text-orange-500"
                   >
                     {t.services.bookNow}
+                    <span aria-hidden="true">→</span>
                   </a>
                 </div>
               </div>

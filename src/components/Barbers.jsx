@@ -48,9 +48,6 @@ function Barbers() {
                   className="absolute inset-0 bg-gradient-to-t from-white/70 dark:from-neutral-900/70 via-transparent"
                   aria-hidden="true"
                 />
-                <span className="absolute left-6 top-6 inline-flex rounded-full border border-orange-200 dark:border-orange-900 bg-orange-50 dark:bg-orange-900/20 px-4 py-1 text-xs uppercase tracking-[0.35em] text-orange-600 dark:text-orange-400">
-                  {member.role}
-                </span>
               </div>
               <div className="flex flex-1 flex-col gap-4 p-8">
                 <div>

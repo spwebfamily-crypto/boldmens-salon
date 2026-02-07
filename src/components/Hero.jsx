@@ -1,14 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Modal from "./Modal";
 import { useTranslation } from "../contexts/LanguageContext";
 
 const heroImage =
   "https://images.unsplash.com/photo-1507682226856-0e0b0a7a41e5?auto=format&fit=crop&w=1600&q=80";
 
 function Hero() {
-  const [showPopup, setShowPopup] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const parallaxRef = useRef(null);
   const t = useTranslation();
@@ -23,18 +21,6 @@ function Hero() {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const hasSeenPopup = localStorage.getItem("hasSeenBookingPopup");
-
-    if (!hasSeenPopup) {
-      const timer = setTimeout(() => {
-        setShowPopup(true);
-        localStorage.setItem("hasSeenBookingPopup", "true");
-      }, 500);
-      return () => clearTimeout(timer);
-    }
   }, []);
 
   return (
@@ -191,24 +177,6 @@ function Hero() {
           </div>
         </motion.div>
       </div>
-      <Modal isOpen={showPopup} onClose={() => setShowPopup(false)}>
-        <div className="relative flex flex-col items-center gap-6 p-2 text-center text-neutral-900 md:p-4">
-          <div className="space-y-2">
-            <h3 className="text-xl md:text-2xl font-semibold">
-              {t.hero.popupTitle}
-            </h3>
-            <p className="text-sm text-neutral-600">
-              {t.hero.popupDesc}
-            </p>
-          </div>
-          <a
-            href="https://www.fresha.com/pt/a/boldmens-salon-estoril-rua-9-de-abril-99a-nat7n6mn/booking?allOffer=true&pId=832755&cartId=6344b719-9962-47ce-bf23-c346cbe5086b"
-            className="w-full rounded-full border border-neutral-900 px-6 py-3 text-center font-semibold text-neutral-900 transition hover:bg-orange-500 hover:border-orange-500 hover:text-white"
-          >
-            {t.hero.bookBtn}
-          </a>
-        </div>
-      </Modal>
     </section>
   );
 }
