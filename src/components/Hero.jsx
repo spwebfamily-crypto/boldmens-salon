@@ -134,7 +134,7 @@ function Hero() {
           <article className="relative flex-1 overflow-hidden rounded-[32px] border border-neutral-200 bg-white/80 shadow-lg aspect-[9/16] max-h-[400px]">
             {!videoLoaded && <div className="h-full w-full bg-neutral-100 animate-pulse" />}
             <video
-              src="/vdo/Boldmens logo.mp4"
+              src="/boldmens-logo.mp4"
               className="h-full w-full object-cover"
               autoPlay
               loop
@@ -155,7 +155,7 @@ function Hero() {
           <article className="relative flex-1 overflow-hidden rounded-[40px] border border-neutral-200 bg-white/80 shadow-lg">
             {!videoLoaded && <div className="h-full w-full bg-neutral-100 animate-pulse" />}
             <video
-              src="/vdo/Boldmens logo.mp4"
+              src="/boldmens-logo.mp4"
               className="h-full w-full object-cover"
               autoPlay
               loop
