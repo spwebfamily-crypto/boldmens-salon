@@ -37,7 +37,7 @@ function Gallery({ items = [] }) {
   }
 
   return (
-    <section className="py-24 md:py-32 transition-colors duration-300 dark:bg-neutral-950">
+    <section className="py-24 md:py-32 bg-white dark:bg-neutral-950 transition-colors duration-300">
       <div className="container space-y-10">
         <header className="space-y-4">
           <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.4em] text-orange-600 dark:text-orange-500">

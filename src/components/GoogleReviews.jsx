@@ -41,7 +41,7 @@ function GoogleReviews() {
   };
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-white">
+    <section className="py-16 md:py-24 lg:py-32 bg-white dark:bg-neutral-950 transition-colors duration-300">
       <div className="container px-4">
         <motion.div 
           className="text-center mb-8 md:mb-12"
@@ -54,11 +54,11 @@ function GoogleReviews() {
             <span className="h-px w-8 bg-orange-500" />
             {t.reviews.tag}
           </span>
-          <h2 className="text-[clamp(1.75rem,5vw,3.5rem)] leading-tight text-neutral-900 mb-4 md:mb-6 px-4">
+          <h2 className="text-[clamp(1.75rem,5vw,3.5rem)] leading-tight text-neutral-900 dark:text-white mb-4 md:mb-6 px-4">
             {t.reviews.title}
           </h2>
           <div className="flex items-center justify-center gap-3 mb-6 md:mb-8">
-            <span className="text-4xl md:text-5xl font-bold text-neutral-900">4.9</span>
+            <span className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white">4.9</span>
             <div>
               <div className="flex gap-1 mb-1">
                 {[...Array(5)].map((_, i) => (
@@ -67,7 +67,7 @@ function GoogleReviews() {
                   </svg>
                 ))}
               </div>
-              <p className="text-xs md:text-sm text-neutral-600">{t.reviews.basedOn}</p>
+              <p className="text-xs md:text-sm text-neutral-600 dark:text-neutral-400">{t.reviews.basedOn}</p>
             </div>
           </div>
         </motion.div>
@@ -84,7 +84,7 @@ function GoogleReviews() {
             return (
             <motion.article 
               key={index} 
-              className="rounded-[24px] md:rounded-[32px] border border-neutral-200 bg-white p-4 md:p-6 shadow-md hover:shadow-lg transition"
+              className="rounded-[24px] md:rounded-[32px] border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-4 md:p-6 shadow-md hover:shadow-lg transition"
               variants={itemVariants}
               whileHover={{ y: -5 }}
             >
@@ -93,8 +93,8 @@ function GoogleReviews() {
                   {avatar}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="font-semibold text-neutral-900 text-sm md:text-base truncate">{review.name}</p>
-                  <p className="text-xs text-neutral-500">{review.date}</p>
+                  <p className="font-semibold text-neutral-900 dark:text-white text-sm md:text-base truncate">{review.name}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400">{review.date}</p>
                 </div>
               </div>
               <div className="flex gap-1 mb-2 md:mb-3">
@@ -104,13 +104,13 @@ function GoogleReviews() {
                   </svg>
                 ))}
               </div>
-              <p className="text-xs md:text-sm text-neutral-700 leading-relaxed">{review.text}</p>
+              <p className="text-xs md:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">{review.text}</p>
             </motion.article>
           );})}
         </motion.div>
 
         <motion.div 
-          className="rounded-[24px] md:rounded-[40px] border border-neutral-200 bg-white p-4 md:p-8 shadow-lg mb-6 md:mb-8"
+          className="rounded-[24px] md:rounded-[40px] border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-4 md:p-8 shadow-lg mb-6 md:mb-8"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
