@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-base text-ink font-body antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tightest text-ink;
+  }
+  p {
+    @apply text-muted;
+  }
+  a {
+    @apply text-ink transition duration-200 hover:text-accent;
+  }
+  ::selection {
+    @apply bg-accent text-white;
+  }
+}

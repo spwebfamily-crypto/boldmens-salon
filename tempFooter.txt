@@ -1,0 +1,30 @@
+function Footer() {
+  return (
+    <footer className="border-t border-outline/50 bg-base/95 py-10">
+      <div className="container flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+        <div className="space-y-2">
+          <a href="#inicio" className="text-sm font-semibold uppercase tracking-[0.4em] text-white">
+            BoldMen's Salon
+          </a>
+          <p className="text-xs text-muted/70">Rua 9 de Abril 99 – Estoril, Portugal – CP 2765-609</p>
+        </div>
+        <div className="flex flex-wrap gap-6 text-xs uppercase tracking-[0.3em] text-muted/60">
+          <a href="#servicos" className="hover:text-white">
+            Serviços Signature
+          </a>
+          <a href="#equipe" className="hover:text-white">
+            Equipe
+          </a>
+          <a href="#contato" className="hover:text-white">
+            Reservas
+          </a>
+        </div>
+        <p className="text-[10px] uppercase tracking-[0.4em] text-muted/50">
+          © {new Date().getFullYear()} BoldMen's Salon. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+  );
+}
+
+export default Footer;
