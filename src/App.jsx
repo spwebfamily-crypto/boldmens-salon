@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import BookingPopup from './components/BookingPopup';
 import Hero from './components/Hero';
 import { LanguageProvider } from './contexts/LanguageContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 import { useTranslation } from './contexts/LanguageContext';
 
 const About = lazy(() => import('./components/About'));
@@ -35,23 +36,25 @@ function HomePage() {
 
 function App() {
   return (
-    <LanguageProvider>
-      <BrowserRouter>
-        <div className="min-h-screen bg-base text-ink">
-          <Navigation />
-          <BookingPopup />
-          <main className="overflow-hidden">
-            <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="text-neutral-500">Carregando...</div></div>}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/secret" element={<SecretPage />} />
-              </Routes>
-            </Suspense>
-          </main>
-          <Footer />
-        </div>
-      </BrowserRouter>
-    </LanguageProvider>
+    <ThemeProvider>
+      <LanguageProvider>
+        <BrowserRouter>
+          <div className="min-h-screen bg-white dark:bg-neutral-950 text-ink dark:text-white transition-colors duration-300">
+            <Navigation />
+            <BookingPopup />
+            <main className="overflow-hidden">
+              <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="text-neutral-500">Carregando...</div></div>}>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/secret" element={<SecretPage />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+          </div>
+        </BrowserRouter>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
 

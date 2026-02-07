@@ -40,7 +40,7 @@ function Hero() {
   return (
     <section
       id="inicio"
-      className="relative isolate flex min-h-[92vh] items-center overflow-hidden bg-white pb-20 pt-28 text-neutral-900"
+      className="relative isolate flex min-h-[92vh] items-center overflow-hidden bg-white dark:bg-neutral-950 pb-20 pt-28 text-neutral-900 dark:text-white transition-colors duration-300"
     >
       <div
         ref={parallaxRef}
@@ -58,7 +58,7 @@ function Hero() {
         aria-hidden="true"
       />
       <div
-        className="absolute inset-0 bg-gradient-to-b from-white via-white/90 to-white"
+        className="absolute inset-0 bg-gradient-to-b from-white dark:from-neutral-950 via-white/90 dark:via-neutral-950/90 to-white dark:to-neutral-950"
         aria-hidden="true"
       />
       <div
@@ -90,7 +90,7 @@ function Hero() {
             {t.hero.title}
           </motion.h1>
           <motion.p 
-            className="max-w-2xl text-base md:text-lg text-neutral-700"
+            className="max-w-2xl text-base md:text-lg text-neutral-700 dark:text-neutral-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
@@ -117,7 +117,7 @@ function Hero() {
             </Link>
           </motion.div>
           <motion.p 
-            className="text-xs uppercase tracking-[0.3em] text-neutral-500"
+            className="text-xs uppercase tracking-[0.3em] text-neutral-500 dark:text-neutral-400"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.8 }}
@@ -166,7 +166,7 @@ function Hero() {
             />
             <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-transparent to-white/90" />
           </article>
-          <div className="flex w-48 flex-col justify-between rounded-[32px] border border-neutral-200 bg-neutral-900 p-6 text-white shadow-md">
+          <div className="flex w-48 flex-col justify-between rounded-[32px] border border-neutral-200 dark:border-neutral-800 bg-neutral-900 dark:bg-neutral-800 p-6 text-white shadow-md">
             <p className="text-sm font-semibold uppercase tracking-[0.35em]">
               {t.hero.hours}
             </p>
