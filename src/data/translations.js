@@ -2,10 +2,6 @@ export const translations = {
   PT: {
     nav: [
       { label: "Início", href: "/" },
-      { label: "Experiência", href: "/experiencia" },
-      { label: "Serviços", href: "/servicos" },
-      { label: "Equipe", href: "/equipe" },
-      { label: "Contato", href: "/contato" },
     ],
     selectLanguage: "Selecione o idioma",
     ctaDesktop: "Agendar",
@@ -203,10 +199,6 @@ export const translations = {
   EN: {
     nav: [
       { label: "Home", href: "/" },
-      { label: "Experience", href: "/experiencia" },
-      { label: "Services", href: "/servicos" },
-      { label: "Team", href: "/equipe" },
-      { label: "Contact", href: "/contato" },
     ],
     selectLanguage: "Select language",
     ctaDesktop: "Book",
@@ -404,10 +396,6 @@ export const translations = {
   ES: {
     nav: [
       { label: "Inicio", href: "/" },
-      { label: "Experiencia", href: "/experiencia" },
-      { label: "Servicios", href: "/servicos" },
-      { label: "Equipo", href: "/equipe" },
-      { label: "Contacto", href: "/contato" },
     ],
     selectLanguage: "Seleccione el idioma",
     ctaDesktop: "Reservar",
@@ -605,10 +593,6 @@ export const translations = {
   RU: {
     nav: [
       { label: "Главная", href: "/" },
-      { label: "Опыт", href: "/experiencia" },
-      { label: "Услуги", href: "/servicos" },
-      { label: "Команда", href: "/equipe" },
-      { label: "Контакты", href: "/contato" },
     ],
     selectLanguage: "Выберите язык",
     ctaDesktop: "Записаться",

@@ -129,11 +129,12 @@ function SecretPage() {
                 times: [0, 0.3, 0.7, 1],
                 exit: { duration: 0.6, ease: 'easeOut' }
               }}
-              className="text-8xl md:text-[12rem] font-bold text-white uppercase tracking-[0.2em]"
+              className="text-8xl md:text-[12rem] font-bold text-white uppercase tracking-[0.2em] px-4"
               style={{ 
                 textShadow: '0 0 20px rgba(249, 115, 22, 1), 0 0 40px rgba(249, 115, 22, 0.8), 0 0 60px rgba(249, 115, 22, 0.6), 0 0 100px rgba(249, 115, 22, 0.4)',
                 fontFamily: '"Bebas Neue", sans-serif',
-                letterSpacing: '0.15em'
+                letterSpacing: '0.15em',
+                fontSize: 'clamp(3rem, 15vw, 12rem)'
               }}
             >
               Be Bold!
