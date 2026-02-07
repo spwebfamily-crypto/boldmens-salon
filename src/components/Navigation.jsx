@@ -136,7 +136,7 @@ function Navigation() {
             </a>
             <a
               href="https://www.fresha.com/pt/a/boldmens-salon-estoril-rua-9-de-abril-99a-nat7n6mn/booking?allOffer=true&pId=832755&cartId=6344b719-9962-47ce-bf23-c346cbe5086b"
-              className="rounded-full border border-neutral-900 dark:border-neutral-700 px-6 py-3 text-center font-semibold text-neutral-900 dark:text-white transition hover:bg-orange-500 hover:border-orange-500 hover:text-white"
+              className="rounded-full border border-neutral-900 dark:border-neutral-700 px-6 py-3 text-center font-semibold text-neutral-900 dark:text-white transition-all duration-200 hover:bg-orange-500 hover:border-orange-500 hover:text-white active:scale-95"
               onClick={() => setIsOpen(false)}
             >
               {current.ctaMobile}

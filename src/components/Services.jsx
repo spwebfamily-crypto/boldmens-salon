@@ -48,7 +48,7 @@ function Services({ items = [] }) {
               }}
               role="button"
               tabIndex={0}
-              className="group relative cursor-pointer overflow-hidden rounded-[32px] border border-neutral-200 bg-white p-8 transition duration-500 hover:-translate-y-1 hover:border-orange-500 hover:shadow-xl dark:border-neutral-800 dark:bg-neutral-900"
+              className="group relative cursor-pointer overflow-hidden rounded-[32px] border border-neutral-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-orange-500 hover:shadow-xl active:scale-[0.98] dark:border-neutral-800 dark:bg-neutral-900"
             >
               <div className="relative flex flex-col gap-4">
                 <div className="flex items-start justify-between gap-4">

@@ -4,6 +4,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   html.dark {
     color-scheme: dark;
@@ -25,5 +27,26 @@
   }
   ::selection {
     @apply bg-accent text-white;
+  }
+  
+  /* iOS-style smooth animations for mobile */
+  @media (max-width: 768px) {
+    * {
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+    }
+    
+    button, a, [role="button"] {
+      transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s ease;
+    }
+    
+    button:active, a:active, [role="button"]:active {
+      transform: scale(0.97);
+      opacity: 0.8;
+    }
+    
+    input, textarea, select {
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
   }
 }

@@ -150,6 +150,13 @@ export const translations = {
       ],
       items: [
         {
+          id: 'haircut',
+          title: 'Corte de cabelo',
+          description: 'Descubra um visual feito sob medida através de uma consultoria que une seu estilo a uma curadoria especializada. Cada detalhe é pensado para valorizar sua identidade, proporcionando um corte de cabelo personalizado, moderno e elegante.',
+          duration: '50 min',
+          price: '€19',
+        },
+        {
           id: 'combo-haircut-shave',
           title: 'Corte de cabelo & Barbear clássico',
           description: 'Desfrute de um cuidado completo com corte de cabelo personalizado e barbear clássico com toalha quente. Cada detalhe é finalizado com precisão, contornos feitos à navalha e acabamento elegante. Utilizamos produtos selecionados para valorizar seu estilo, respeitando sua personalidade.',
@@ -161,32 +168,29 @@ export const translations = {
           ]
         },
         {
-          id: 'haircut',
-          title: 'Corte signature',
-          description: 'Consultoria inicial, corte estruturado com tesoura e finalização com produtos autorais Bold Mens.',
-          duration: '50 min',
-          price: '€45',
-        },
-        {
-          id: 'hot-towel-shave',
-          title: 'Barbear clássico com toalha quente',
-          description: 'Navalha, toalhas quentes e blend de óleos essenciais seguidos por máscara hidratante e toalha fria.',
-          duration: '30 min',
-          price: '€35',
-        },
-        {
-          id: 'hair-finish',
-          title: 'Acabamento de cabelo',
-          description: 'Retoque rápido de contornos e styling para compromissos imediatos.',
-          duration: '15 min',
-          price: '€18',
-        },
-        {
           id: 'brows-straight-razor',
           title: 'Sobrancelhas (navalha)',
           description: 'Aparo, Alinhamento e Finalização de Sobrancelhas.',
           duration: '15 min',
           price: '€5',
+        },
+        {
+          id: 'hot-towel-shave',
+          title: 'Barbear clássico com toalha quente',
+          description: 'Barbear Clássico com Navalha e Toalha Quente, seguido por uma Seleção de Produtos e Finalizado com Toalha Fria, Hidratante e Pós-Barba.',
+          duration: '30 min',
+          price: '€16',
+        },
+        {
+          id: 'detox-facial-fullshave',
+          title: 'Detox facial + Barba fullshave',
+          description: 'Tratamento completo de detox facial com black mask seguido de barbear clássico com toalha quente para uma experiência de cuidado total.',
+          duration: '1h 10min',
+          price: '€31',
+          includedServices: [
+            { name: 'Detox facial com black mask', duration: '40 min' },
+            { name: 'Barbear clássico com toalha quente', duration: '30 min' }
+          ]
         },
         {
           id: 'combo-brows-contours',
@@ -200,18 +204,15 @@ export const translations = {
           ]
         },
         {
-          id: 'buzz-cut',
-          title: 'Buzz cut completo',
-          description: 'Máquina com pente único escolhido pelo cliente e acabamento com lâmina.',
-          duration: '30 min',
-          price: '€30',
-        },
-        {
-          id: 'nose-wax',
-          title: 'Depilação nasal',
-          description: 'Remoção confortável com cera quente e aplicação calmante.',
-          duration: '20 min',
-          price: '€20',
+          id: 'buzz-cut-barber',
+          title: 'Buzz cut & Barber clássico',
+          description: 'Comece com um corte de cabelo usando o pente de sua escolha, seguido de um aparo de barba com toalha quente e acabamento preciso nos contornos com navalha. Finalizamos com estilização profissional e um toque de curadoria para valorizar seu visual único.',
+          duration: '1h',
+          price: '€25',
+          includedServices: [
+            { name: 'Barbear clássico com toalha quente', duration: '30 min' },
+            { name: 'Buzz cut (um pente por todo)', duration: '30 min' }
+          ]
         },
       ]
     },
