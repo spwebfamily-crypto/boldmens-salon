@@ -73,7 +73,7 @@ function Hero() {
           transition={{ duration: 0.8 }}
         >
           <motion.div 
-            className="flex items-center gap-3 text-xs uppercase tracking-[0.38em] text-neutral-600"
+            className="flex items-center gap-3 text-xs uppercase tracking-[0.38em] text-neutral-600 dark:text-neutral-400"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -82,7 +82,7 @@ function Hero() {
             {t.hero.subtitle}
           </motion.div>
           <motion.h1 
-            className="text-[clamp(2.5rem,8vw,4.9rem)] font-display leading-[1.04]"
+            className="text-[clamp(2.5rem,8vw,4.9rem)] font-display leading-[1.04] text-neutral-900 dark:text-neutral-100"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
@@ -105,13 +105,13 @@ function Hero() {
           >
             <a
               href="https://www.fresha.com/pt/a/boldmens-salon-estoril-rua-9-de-abril-99a-nat7n6mn/booking?allOffer=true&pId=832755&cartId=6344b719-9962-47ce-bf23-c346cbe5086b"
-              className="inline-flex items-center justify-center rounded-full bg-neutral-900 px-6 md:px-7 py-3 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] text-white transition hover:-translate-y-0.5 hover:bg-orange-500"
+              className="inline-flex items-center justify-center rounded-full bg-neutral-900 dark:bg-orange-500 px-6 md:px-7 py-3 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] text-white transition hover:-translate-y-0.5 hover:bg-orange-500 dark:hover:bg-orange-600"
             >
               {t.hero.bookBtn}
             </a>
             <Link
               to="/servicos"
-              className="inline-flex items-center justify-center rounded-full border border-neutral-900 px-6 md:px-7 py-3 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] text-neutral-900 transition hover:-translate-y-0.5 hover:border-orange-500 hover:text-orange-600"
+              className="inline-flex items-center justify-center rounded-full border border-neutral-900 dark:border-neutral-700 px-6 md:px-7 py-3 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] text-neutral-900 dark:text-neutral-200 transition hover:-translate-y-0.5 hover:border-orange-500 hover:text-orange-600 dark:hover:text-orange-400"
             >
               {t.hero.servicesBtn}
             </Link>
@@ -167,10 +167,10 @@ function Hero() {
             <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-transparent to-white/90" />
           </article>
           <div className="flex w-48 flex-col justify-between rounded-[32px] border border-neutral-200 dark:border-neutral-800 bg-neutral-900 dark:bg-neutral-800 p-6 text-white shadow-md">
-            <p className="text-sm font-semibold uppercase tracking-[0.35em]">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-white">
               {t.hero.hours}
             </p>
-            <div className="space-y-4 text-sm text-neutral-200">
+            <div className="space-y-4 text-sm text-neutral-200 dark:text-neutral-300">
               <div>
                 <p>{t.hero.weekdays}</p>
                 <p className="text-white">{t.hero.weekdaysTime}</p>
@@ -182,7 +182,7 @@ function Hero() {
             </div>
             <a
               href="https://www.google.com/maps/search/?api=1&query=Rua+9+de+Abril+99%2C+Estoril%2C+Portugal+2765-609"
-              className="text-xs font-semibold uppercase tracking-[0.3em] text-orange-200 transition hover:text-orange-400"
+              className="text-xs font-semibold uppercase tracking-[0.3em] text-orange-200 dark:text-orange-300 transition hover:text-orange-400"
               target="_blank"
               rel="noreferrer"
             >

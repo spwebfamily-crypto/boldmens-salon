@@ -29,7 +29,7 @@ function Services({ items = [] }) {
           </div>
           <a
             href="#contato"
-            className="inline-flex items-center justify-center rounded-full border border-neutral-900 px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-neutral-900 transition hover:bg-orange-500 hover:border-orange-500 hover:text-white dark:border-white dark:text-white"
+            className="inline-flex items-center justify-center rounded-full border border-neutral-900 dark:border-neutral-700 px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-neutral-900 dark:text-neutral-200 transition hover:bg-orange-500 hover:border-orange-500 hover:text-white"
           >
             {t.services.menuButton}
           </a>
@@ -73,7 +73,7 @@ function Services({ items = [] }) {
                   <a
                     href={bookingUrl}
                     onClick={(e) => e.stopPropagation()}
-                    className="text-orange-600 transition hover:text-orange-500 dark:text-orange-500"
+                    className="text-orange-600 dark:text-orange-400 transition hover:text-orange-500"
                   >
                     {t.services.bookNow}
                   </a>
