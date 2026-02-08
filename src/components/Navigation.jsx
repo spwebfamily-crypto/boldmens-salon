@@ -25,6 +25,12 @@ function Navigation() {
               {link.label}
             </Link>
           ))}
+          <a
+            href="#equipe"
+            className="transition hover:text-orange-500 dark:hover:text-orange-400"
+          >
+            Equipe
+          </a>
           <Link
             to="/secret"
             className="transition hover:text-orange-500 text-lg animate-pulse"
@@ -113,6 +119,13 @@ function Navigation() {
                 {link.label}
               </Link>
             ))}
+            <a
+              href="#equipe"
+              className="py-2 text-neutral-800 dark:text-neutral-200 transition hover:text-orange-500"
+              onClick={() => setIsOpen(false)}
+            >
+              Equipe
+            </a>
             <Link
               to="/secret"
               className="py-2 text-neutral-800 dark:text-neutral-200 transition hover:text-orange-500 text-lg animate-pulse"

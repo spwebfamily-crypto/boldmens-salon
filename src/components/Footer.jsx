@@ -19,15 +19,20 @@ function Footer() {
           </p>
         </div>
         <div className="flex flex-wrap gap-6 text-xs uppercase tracking-[0.3em] text-neutral-600 dark:text-neutral-400">
-          <Link to="/servicos" className="transition hover:text-orange-500">
+          <a href="#servicos" className="transition hover:text-orange-500">
             {t.footer.services}
-          </Link>
-          <Link to="/equipe" className="transition hover:text-orange-500">
+          </a>
+          <a href="#equipe" className="transition hover:text-orange-500">
             {t.footer.team}
-          </Link>
-          <Link to="/contato" className="transition hover:text-orange-500">
+          </a>
+          <a 
+            href="https://www.fresha.com/pt/a/boldmens-salon-estoril-rua-9-de-abril-99a-nat7n6mn/booking?allOffer=true&pId=832755&cartId=6344b719-9962-47ce-bf23-c346cbe5086b"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition hover:text-orange-500"
+          >
             {t.footer.bookings}
-          </Link>
+          </a>
         </div>
         <div className="flex justify-end">
           <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 dark:text-neutral-500">
