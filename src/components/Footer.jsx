@@ -14,28 +14,28 @@ function Footer() {
           >
             BoldMen's Salon
           </Link>
-          <p className="text-xs text-neutral-600 dark:text-neutral-400">
+          <p className="text-xs text-neutral-600 dark:text-white">
             Rua 9 de Abril 99 - Estoril, Portugal - CP 2765-609
           </p>
         </div>
-        <div className="flex flex-wrap gap-6 text-xs uppercase tracking-[0.3em] text-neutral-600 dark:text-neutral-400">
-          <a href="#servicos" className="transition hover:text-orange-500">
+        <div className="flex flex-wrap gap-6 text-xs uppercase tracking-[0.3em] text-neutral-600 dark:text-white">
+          <a href="#servicos" className="transition hover:text-orange-500 dark:text-white">
             {t.footer.services}
           </a>
-          <a href="#equipe" className="transition hover:text-orange-500">
+          <a href="#equipe" className="transition hover:text-orange-500 dark:text-white">
             {t.footer.team}
           </a>
           <a 
             href="https://www.fresha.com/pt/a/boldmens-salon-estoril-rua-9-de-abril-99a-nat7n6mn/booking?allOffer=true&pId=832755&cartId=6344b719-9962-47ce-bf23-c346cbe5086b"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition hover:text-orange-500"
+            className="transition hover:text-orange-500 dark:text-white"
           >
             {t.footer.bookings}
           </a>
         </div>
         <div className="flex justify-end">
-          <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 dark:text-neutral-500">
+          <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 dark:text-white">
             &copy; {new Date().getFullYear()} BoldMen's Salon.
           </p>
         </div>

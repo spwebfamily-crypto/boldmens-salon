@@ -152,7 +152,7 @@ function GoogleReviews() {
             href="https://www.google.com/maps/place/BoldMen%E2%80%99s+Salon/@38.6953615,-9.3764911,945m/data=!3m1!1e3!4m8!3m7!1s0xd1ec5edf74664bd:0x4df25e3be83a61bd!8m2!3d38.6953573!4d-9.3739162!9m1!1b1!16s%2Fg%2F11kb4rb4ms"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-neutral-900 px-6 md:px-8 py-3 md:py-4 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] text-neutral-900 transition hover:bg-orange-500 hover:border-orange-500 hover:text-white hover:-translate-y-1"
+            className="inline-flex items-center gap-2 rounded-full border border-neutral-900 dark:border-neutral-700 px-6 md:px-8 py-3 md:py-4 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] text-neutral-900 dark:text-neutral-200 transition hover:bg-orange-500 hover:border-orange-500 hover:text-white hover:-translate-y-1 active:scale-95"
           >
             {t.reviews.viewAll}
             <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

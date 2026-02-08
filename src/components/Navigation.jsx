@@ -15,22 +15,16 @@ function Navigation() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-neutral-200 dark:border-neutral-800 bg-white/90 dark:bg-neutral-950/90 backdrop-blur-lg">
       <div className="container flex items-center justify-between gap-6 py-4">
-        <nav className="hidden items-center gap-8 text-[11px] uppercase tracking-[0.35em] text-neutral-600 dark:text-neutral-400 lg:flex">
+        <nav className="hidden items-center gap-8 text-[11px] uppercase tracking-[0.35em] text-neutral-600 dark:text-neutral-300 lg:flex">
           {current.nav.map((link) => (
             <Link
               key={link.href}
               to={link.href}
-              className="transition hover:text-orange-500 dark:hover:text-orange-400"
+              className="transition text-neutral-600 dark:text-neutral-300 hover:text-orange-500 dark:hover:text-orange-400"
             >
               {link.label}
             </Link>
           ))}
-          <a
-            href="#equipe"
-            className="transition hover:text-orange-500 dark:hover:text-orange-400"
-          >
-            Equipe
-          </a>
           <Link
             to="/secret"
             className="transition hover:text-orange-500 text-lg animate-pulse"
@@ -41,7 +35,7 @@ function Navigation() {
         <div className="hidden items-center gap-4 lg:flex">
           <button
             onClick={toggleTheme}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 transition hover:text-orange-500 dark:hover:text-orange-400"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-300 transition hover:text-orange-500 dark:hover:text-orange-400"
             aria-label="Toggle theme"
           >
             {theme === "light" ? (
@@ -55,7 +49,7 @@ function Navigation() {
             )}
           </button>
           <div
-            className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-neutral-600 dark:text-neutral-400"
+            className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-neutral-600 dark:text-neutral-300"
             aria-label={current.selectLanguage}
             role="group"
           >
@@ -70,7 +64,7 @@ function Navigation() {
                   className={`rounded-full border px-3 py-2 transition ${
                     isActive
                       ? "border-neutral-900 dark:border-orange-500 bg-neutral-900 dark:bg-orange-500 text-white"
-                      : "border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:border-orange-500 hover:text-orange-500"
+                      : "border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-300 hover:border-orange-500 hover:text-orange-500"
                   }`}
                 >
                   {code}
@@ -80,7 +74,7 @@ function Navigation() {
           </div>
           <a
             href="tel:+351912074656"
-            className="text-[11px] uppercase tracking-[0.35em] text-neutral-500 dark:text-neutral-400 transition hover:text-orange-500"
+            className="text-[11px] uppercase tracking-[0.35em] text-neutral-500 dark:text-neutral-300 transition hover:text-orange-500"
           >
             +351 912 074 656
           </a>
@@ -119,13 +113,6 @@ function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <a
-              href="#equipe"
-              className="py-2 text-neutral-800 dark:text-neutral-200 transition hover:text-orange-500"
-              onClick={() => setIsOpen(false)}
-            >
-              Equipe
-            </a>
             <Link
               to="/secret"
               className="py-2 text-neutral-800 dark:text-neutral-200 transition hover:text-orange-500 text-lg animate-pulse"

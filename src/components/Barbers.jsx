@@ -26,7 +26,7 @@ function Barbers() {
               {t.team.title}
             </h2>
           </div>
-          <p className="max-w-xl text-sm text-neutral-700 dark:text-neutral-400">
+          <p className="max-w-xl text-sm text-neutral-700 dark:text-neutral-300">
             {t.team.description}
           </p>
         </header>
@@ -54,7 +54,7 @@ function Barbers() {
                   <h3 className="text-2xl font-semibold text-neutral-900 dark:text-white">
                     {member.name}
                   </h3>
-                  <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-400">
+                  <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-300">
                     {member.bio}
                   </p>
                 </div>

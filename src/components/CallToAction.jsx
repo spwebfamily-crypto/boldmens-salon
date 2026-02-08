@@ -18,13 +18,13 @@ function CallToAction() {
             <h2 className="text-[clamp(1.8rem,3vw,3rem)] leading-tight text-neutral-900 dark:text-white">
               {t.cta.title}
             </h2>
-            <p className="text-base text-neutral-700 dark:text-neutral-400">
+            <p className="text-base text-neutral-700 dark:text-neutral-300">
               {t.cta.description}
             </p>
             <div className="grid gap-4 sm:grid-cols-2">
               <a
                 href="tel:+351912074656"
-                className="flex items-center justify-between rounded-full bg-neutral-900 px-6 py-4 text-sm font-semibold uppercase tracking-[0.35em] text-white transition hover:-translate-y-0.5 hover:bg-orange-500"
+                className="flex items-center justify-between rounded-full bg-neutral-900 dark:bg-orange-500 px-6 py-4 text-sm font-semibold uppercase tracking-[0.35em] text-white transition hover:-translate-y-0.5 hover:bg-orange-500 dark:hover:bg-orange-600 active:scale-95"
               >
                 {t.cta.phoneBtn}
                 <span aria-hidden="true">&rarr;</span>
@@ -59,7 +59,7 @@ function CallToAction() {
                   +351 912 074 656
                 </span>
               </p>
-              <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+              <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-300">
                 {t.cta.responseTime}
               </p>
             </div>

@@ -23,7 +23,7 @@ function Services({ items = [] }) {
             <h2 className="text-[clamp(2rem,3vw,3.25rem)] leading-tight text-neutral-900 dark:text-white">
               {t.services.title}
             </h2>
-            <p className="text-base text-neutral-700 dark:text-neutral-400">
+            <p className="text-base text-neutral-700 dark:text-neutral-300">
               {t.services.description}
             </p>
           </div>
@@ -60,16 +60,16 @@ function Services({ items = [] }) {
                     <span className="text-xs text-neutral-500 dark:text-neutral-400">{service.duration}</span>
                   </div>
                 </div>
-                <p className="text-sm text-neutral-700 dark:text-neutral-400 leading-relaxed">
+                <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
                   {service.description}
                 </p>
                 {service.includedServices && (
                   <div className="mt-2 space-y-2">
-                    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-600 dark:text-neutral-500">Itens inclusos</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-600 dark:text-neutral-400">Itens inclusos</p>
                     {service.includedServices.map((item, idx) => (
                       <div key={idx} className="flex items-center justify-between text-sm">
-                        <span className="text-neutral-700 dark:text-neutral-400 uppercase text-xs tracking-wider">{item.name}</span>
-                        <span className="text-neutral-500 dark:text-neutral-500 text-xs">{item.duration}</span>
+                        <span className="text-neutral-700 dark:text-neutral-300 uppercase text-xs tracking-wider">{item.name}</span>
+                        <span className="text-neutral-500 dark:text-neutral-400 text-xs">{item.duration}</span>
                       </div>
                     ))}
                   </div>

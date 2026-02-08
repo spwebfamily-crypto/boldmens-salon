@@ -47,7 +47,7 @@ function Gallery({ items = [] }) {
           <h2 className="text-[clamp(2rem,3vw,3.25rem)] leading-tight text-neutral-900 dark:text-white">
             {t.gallery.title}
           </h2>
-          <p className="max-w-3xl text-base text-neutral-700 dark:text-neutral-400">
+          <p className="max-w-3xl text-base text-neutral-700 dark:text-neutral-300">
             {t.gallery.description}
           </p>
         </header>

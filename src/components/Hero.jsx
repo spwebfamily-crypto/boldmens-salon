@@ -48,7 +48,7 @@ function Hero() {
         aria-hidden="true"
       />
       <div
-        className="absolute -left-24 top-0 h-80 w-80 rotate-6 rounded-full bg-orange-50 blur-3xl"
+        className="hidden md:block absolute -left-24 top-0 h-80 w-80 rotate-6 rounded-full bg-orange-50 blur-3xl"
         aria-hidden="true"
       />
       <div className="container relative grid gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-center">
