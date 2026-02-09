@@ -29,6 +29,15 @@
     @apply bg-accent text-white;
   }
   
+  /* Performance optimizations */
+  * {
+    will-change: auto;
+  }
+  
+  img, video {
+    content-visibility: auto;
+  }
+  
   /* iOS-style smooth animations for mobile */
   @media (max-width: 768px) {
     * {

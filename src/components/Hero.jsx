@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useTranslation } from "../contexts/LanguageContext";
@@ -8,20 +8,7 @@ const heroImage =
 
 function Hero() {
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const parallaxRef = useRef(null);
   const t = useTranslation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (parallaxRef.current) {
-        const scrolled = window.scrollY;
-        parallaxRef.current.style.transform = `translateY(${scrolled * 0.5}px)`;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <section
@@ -29,8 +16,7 @@ function Hero() {
       className="relative isolate flex min-h-[92vh] items-center overflow-hidden bg-white dark:bg-neutral-950 pb-20 pt-28 text-neutral-900 dark:text-white transition-colors duration-300"
     >
       <div
-        ref={parallaxRef}
-        className="absolute inset-0 bg-cover bg-center will-change-transform"
+        className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${heroImage})`,
         }}
