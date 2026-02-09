@@ -8,7 +8,7 @@ function WhatsAppButton() {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 group"
+      className="fixed bottom-6 right-6 z-50 group lg:hidden"
       aria-label="Falar no WhatsApp"
     >
       <div className="flex items-center gap-3 rounded-full bg-gradient-to-r from-green-500 to-green-600 p-4 shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:from-green-600 hover:to-green-700 active:scale-95">

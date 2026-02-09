@@ -91,7 +91,7 @@ function Hero() {
           >
             <a
               href="https://www.fresha.com/pt/a/boldmens-salon-estoril-rua-9-de-abril-99a-nat7n6mn/booking?allOffer=true&pId=832755&cartId=6344b719-9962-47ce-bf23-c346cbe5086b"
-              className="inline-flex items-center justify-center rounded-full bg-neutral-900 dark:bg-orange-500 px-6 md:px-7 py-3 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-orange-500 dark:hover:bg-orange-600 active:scale-95"
+              className="inline-flex items-center justify-center rounded-full bg-neutral-900 dark:bg-orange-600 px-6 md:px-7 py-3 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] text-white shadow-lg dark:shadow-orange-500/50 transition-all duration-200 hover:-translate-y-0.5 hover:bg-orange-500 dark:hover:bg-orange-500 hover:shadow-[0_0_30px_rgba(249,115,22,0.8)] dark:hover:shadow-orange-500/70 hover:text-black active:scale-95"
             >
               {t.hero.bookBtn}
             </a>

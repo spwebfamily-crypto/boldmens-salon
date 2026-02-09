@@ -93,8 +93,8 @@ function Modal({ isOpen, onClose, children }) {
       {/* Conteúdo do Modal com transição de escala e opacidade */}
       <div
         ref={modalRef}
-        className={`relative max-h-[90vh] w-full max-w-md overflow-y-auto rounded-lg bg-white p-6 shadow-xl transition-all duration-300 ease-out md:max-w-lg dark:bg-neutral-900 ${
-          isVisible ? "scale-100 opacity-100" : "scale-95 opacity-0"
+        className={`relative max-h-[90vh] w-full max-w-md overflow-y-auto rounded-lg bg-white p-6 shadow-xl transition-all duration-500 ease-out md:max-w-lg dark:bg-neutral-900 ${
+          isVisible ? "scale-100 opacity-100 translate-y-0" : "scale-90 opacity-0 translate-y-8"
         }`}
       >
         <div className="pointer-events-none sticky top-0 z-10 -ml-6 -mr-6 -mt-6 mb-4 flex justify-end px-6 pt-6">

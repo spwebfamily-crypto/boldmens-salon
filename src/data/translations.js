@@ -3,6 +3,9 @@ export const translations = {
     nav: [
       { label: "Início", href: "/" },
     ],
+    collection: "Coleção",
+    bookAppointment: "Reservar horário",
+    askQuestions: "Tirar dúvidas",
     selectLanguage: "Selecione o idioma",
     ctaDesktop: "Agendar",
     ctaMobile: "Reservar horário",
@@ -231,6 +234,9 @@ export const translations = {
     nav: [
       { label: "Home", href: "/" },
     ],
+    collection: "Collection",
+    bookAppointment: "Book appointment",
+    askQuestions: "Ask questions",
     selectLanguage: "Select language",
     ctaDesktop: "Book",
     ctaMobile: "Book now",
@@ -436,6 +442,9 @@ export const translations = {
     nav: [
       { label: "Inicio", href: "/" },
     ],
+    collection: "Colección",
+    bookAppointment: "Reservar cita",
+    askQuestions: "Hacer preguntas",
     selectLanguage: "Seleccione el idioma",
     ctaDesktop: "Reservar",
     ctaMobile: "Reservar cita",
@@ -641,6 +650,9 @@ export const translations = {
     nav: [
       { label: "Главная", href: "/" },
     ],
+    collection: "Коллекция",
+    bookAppointment: "Записаться",
+    askQuestions: "Задать вопросы",
     selectLanguage: "Выберите язык",
     ctaDesktop: "Записаться",
     ctaMobile: "Записаться",
