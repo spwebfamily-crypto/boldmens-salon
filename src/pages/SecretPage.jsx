@@ -17,17 +17,19 @@ const ProductCard = memo(function ProductCard({ product, index, onClick }) {
       onClick={onClick}
       className="group cursor-pointer"
     >
-      <div className="relative aspect-[3/4] bg-neutral-200 dark:bg-neutral-900 overflow-hidden mb-4">
+      <div className="relative aspect-[3/4] bg-neutral-200 dark:bg-neutral-900 overflow-hidden mb-4 rounded-2xl">
         <img
           src={product.images[0]}
           alt={product.name}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
+          width="400"
+          height="533"
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
       </div>
       <div className="space-y-1">
-        <p className="text-xs uppercase tracking-[0.2em] text-neutral-500">{product.category}</p>
+        <p className="text-xs uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">{product.category}</p>
         <h3 className="text-lg font-semibold text-neutral-900 dark:text-white tracking-tight">{product.name}</h3>
       </div>
     </motion.div>
@@ -52,9 +54,9 @@ function SecretPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h1 className="text-6xl md:text-8xl font-bold text-neutral-900 dark:text-white mb-4 tracking-tighter">
+          <h1 className="text-5xl md:text-8xl font-bold text-neutral-900 dark:text-white tracking-tighter">
             BOLD COLLECTION
           </h1>
         </motion.div>
@@ -97,7 +99,7 @@ function SecretPage() {
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="relative w-full aspect-[3/4] bg-neutral-900 rounded-2xl overflow-hidden">
+              <div className="relative w-full aspect-[3/4] bg-neutral-900 rounded-2xl overflow-hidden shadow-2xl">
                 <motion.img
                   key={currentImageIndex}
                   src={selectedProduct.images[currentImageIndex]}
@@ -105,7 +107,9 @@ function SecretPage() {
                   className="w-full h-full object-cover"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 0.4 }}
+                  transition={{ duration: 0.3 }}
+                  width="600"
+                  height="800"
                 />
                 {selectedProduct.images.length > 1 && (
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
