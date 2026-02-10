@@ -1,10 +1,26 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useTranslation } from "../contexts/LanguageContext";
 
-const heroImage =
-  "https://images.unsplash.com/photo-1507682226856-0e0b0a7a41e5?auto=format&fit=crop&w=1200&q=75";
+const heroImage = "https://images.unsplash.com/photo-1507682226856-0e0b0a7a41e5?auto=format&fit=crop&w=1200&q=75";
+
+const VideoCard = memo(function VideoCard({ onLoad }) {
+  return (
+    <video
+      src="/boldmens-logo.mp4"
+      className="h-full w-full object-cover"
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="metadata"
+      onLoadedData={onLoad}
+      width="400"
+      height="711"
+    />
+  );
+});
 
 function Hero() {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -13,42 +29,15 @@ function Hero() {
   return (
     <section
       id="inicio"
-      className="relative isolate flex min-h-[92vh] items-center overflow-hidden bg-white dark:bg-neutral-950 pb-20 pt-28 text-neutral-900 dark:text-white transition-colors duration-300"
+      className="relative isolate flex min-h-[92vh] items-center overflow-hidden bg-white dark:bg-neutral-950 pb-20 pt-28 text-neutral-900 dark:text-white"
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-        }}
-        aria-hidden="true"
-      />
-      <picture className="absolute inset-0">
-        <source
-          srcSet="https://images.unsplash.com/photo-1507682226856-0e0b0a7a41e5?auto=format&fit=crop&w=800&q=75 800w,
-                  https://images.unsplash.com/photo-1507682226856-0e0b0a7a41e5?auto=format&fit=crop&w=1200&q=75 1200w"
-          sizes="100vw"
-        />
-        <img
-          src={heroImage}
-          alt=""
-          className="h-full w-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-        />
-      </picture>
-      <div
-        className="absolute inset-0"
-        style={{
-          background: `linear-gradient(120deg, rgba(255,255,255,0.94) 40%, rgba(255,255,255,0.4))`,
-        }}
+        style={{ backgroundImage: `url(${heroImage})` }}
         aria-hidden="true"
       />
       <div
-        className="absolute inset-0 bg-gradient-to-b from-white dark:from-neutral-950 via-white/90 dark:via-neutral-950/90 to-white dark:to-neutral-950"
-        aria-hidden="true"
-      />
-      <div
-        className="hidden md:block absolute -left-24 top-0 h-80 w-80 rotate-6 rounded-full bg-orange-50 blur-3xl"
+        className="absolute inset-0 bg-gradient-to-b from-white/95 dark:from-neutral-950/95 via-white/90 dark:via-neutral-950/90 to-white dark:to-neutral-950"
         aria-hidden="true"
       />
       <div className="container relative grid gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-center">
@@ -56,81 +45,45 @@ function Hero() {
           className="space-y-6 md:space-y-10"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
         >
-          <motion.div 
-            className="flex items-center gap-3 text-xs uppercase tracking-[0.38em] text-neutral-600 dark:text-neutral-400"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-          >
+          <div className="flex items-center gap-3 text-xs uppercase tracking-[0.38em] text-neutral-600 dark:text-neutral-400">
             <span className="h-px w-10 bg-orange-500" />
             {t.hero.subtitle}
-          </motion.div>
-          <motion.h1 
-            className="text-[clamp(2.5rem,8vw,4.9rem)] font-display leading-[1.04] text-neutral-900 dark:text-neutral-100"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-          >
+          </div>
+          <h1 className="text-[clamp(2.5rem,8vw,4.9rem)] font-display leading-[1.04] text-neutral-900 dark:text-neutral-100">
             {t.hero.title}
-          </motion.h1>
-          <motion.p 
-            className="max-w-2xl text-base md:text-lg text-neutral-700 dark:text-neutral-300"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-          >
+          </h1>
+          <p className="max-w-2xl text-base md:text-lg text-neutral-700 dark:text-neutral-300">
             {t.hero.description}
-          </motion.p>
-          <motion.div 
-            className="flex flex-col sm:flex-row flex-wrap gap-3"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-          >
+          </p>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
             <a
               href="https://www.fresha.com/pt/a/boldmens-salon-estoril-rua-9-de-abril-99a-nat7n6mn/booking?allOffer=true&pId=832755&cartId=6344b719-9962-47ce-bf23-c346cbe5086b"
-              className="inline-flex items-center justify-center rounded-full bg-neutral-900 dark:bg-orange-600 px-6 md:px-7 py-3 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] text-white shadow-lg dark:shadow-orange-500/50 transition-all duration-200 hover:-translate-y-0.5 hover:bg-orange-500 dark:hover:bg-orange-500 hover:shadow-[0_0_30px_rgba(249,115,22,0.8)] dark:hover:shadow-orange-500/70 hover:text-black active:scale-95"
+              className="inline-flex items-center justify-center rounded-full bg-neutral-900 dark:bg-orange-600 px-6 md:px-7 py-3 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-orange-500 active:scale-95"
             >
               {t.hero.bookBtn}
             </a>
             <Link
               to="/servicos"
-              className="inline-flex items-center justify-center rounded-full border border-neutral-900 dark:border-neutral-700 px-6 md:px-7 py-3 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] text-neutral-900 dark:text-neutral-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-orange-500 hover:text-orange-600 dark:hover:text-orange-400 active:scale-95"
+              className="inline-flex items-center justify-center rounded-full border border-neutral-900 dark:border-neutral-700 px-6 md:px-7 py-3 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] text-neutral-900 dark:text-neutral-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-orange-500 hover:text-orange-600 active:scale-95"
             >
               {t.hero.servicesBtn}
             </Link>
-          </motion.div>
-          <motion.p 
-            className="text-xs uppercase tracking-[0.3em] text-neutral-500 dark:text-neutral-400"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-          >
+          </div>
+          <p className="text-xs uppercase tracking-[0.3em] text-neutral-500 dark:text-neutral-400">
             {t.hero.location}
-          </motion.p>
+          </p>
         </motion.div>
         <motion.div 
           className="flex gap-6 lg:hidden mt-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
         >
           <article className="relative flex-1 overflow-hidden rounded-[32px] border border-neutral-200 bg-white/80 shadow-lg aspect-[9/16] max-h-[400px]">
             {!videoLoaded && <div className="h-full w-full bg-neutral-100 animate-pulse" />}
-            <video
-              src="/boldmens-logo.mp4"
-              className="h-full w-full object-cover"
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              onLoadedData={() => setVideoLoaded(true)}
-              width="225"
-              height="400"
-            />
+            <VideoCard onLoad={() => setVideoLoaded(true)} />
             <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-transparent to-white/90" />
           </article>
         </motion.div>
@@ -138,22 +91,11 @@ function Hero() {
           className="hidden gap-6 lg:flex"
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
         >
           <article className="relative flex-1 overflow-hidden rounded-[40px] border border-neutral-200 bg-white/80 shadow-lg">
             {!videoLoaded && <div className="h-full w-full bg-neutral-100 animate-pulse" />}
-            <video
-              src="/boldmens-logo.mp4"
-              className="h-full w-full object-cover"
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              onLoadedData={() => setVideoLoaded(true)}
-              width="400"
-              height="711"
-            />
+            <VideoCard onLoad={() => setVideoLoaded(true)} />
             <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-transparent to-white/90" />
           </article>
           <div className="flex w-48 flex-col justify-between rounded-[32px] border border-neutral-200 dark:border-neutral-800 bg-neutral-900 dark:bg-neutral-800 p-6 text-white shadow-md">
@@ -185,4 +127,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default memo(Hero);

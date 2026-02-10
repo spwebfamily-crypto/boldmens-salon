@@ -1,61 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
+  
   html.dark {
     color-scheme: dark;
   }
+  
   body {
     @apply bg-base text-ink font-body antialiased;
+    overscroll-behavior: none;
   }
-  h1,
-  h2,
-  h3,
-  h4 {
+  
+  h1, h2, h3, h4 {
     @apply font-display tracking-tightest text-ink;
+    text-wrap: balance;
   }
+  
   p {
     @apply text-muted;
   }
+  
   a {
-    @apply text-ink transition duration-200 hover:text-accent;
+    @apply text-ink transition-colors duration-200 hover:text-accent;
   }
+  
   ::selection {
     @apply bg-accent text-white;
   }
   
-  /* Performance optimizations */
-  * {
-    will-change: auto;
-  }
-  
   img, video {
     content-visibility: auto;
+    contain: layout style paint;
   }
   
-  /* iOS-style smooth animations for mobile */
-  @media (max-width: 768px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  button, a[href] {
+    touch-action: manipulation;
+  }
+  
+  @media (hover: hover) {
     * {
-      -webkit-tap-highlight-color: transparent;
-      -webkit-touch-callout: none;
+      transition-duration: 0.2s;
     }
-    
-    button, a, [role="button"] {
-      transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s ease;
-    }
-    
-    button:active, a:active, [role="button"]:active {
-      transform: scale(0.97);
-      opacity: 0.8;
-    }
-    
-    input, textarea, select {
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
     }
   }
 }

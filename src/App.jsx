@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
@@ -16,13 +16,15 @@ const Gallery = lazy(() => import('./components/Gallery'));
 const CallToAction = lazy(() => import('./components/CallToAction'));
 const SecretPage = lazy(() => import('./pages/SecretPage'));
 
-function HomePage() {
+const Loader = () => <div className="h-20" />;
+
+const HomePage = memo(function HomePage() {
   const t = useTranslation();
   
   return (
     <>
       <Hero />
-      <Suspense fallback={<div className="h-20" />}>
+      <Suspense fallback={<Loader />}>
         <About />
         <GoogleReviews />
         <Services items={t.services.items} />
@@ -32,7 +34,7 @@ function HomePage() {
       </Suspense>
     </>
   );
-}
+});
 
 function App() {
   return (
@@ -42,8 +44,8 @@ function App() {
           <div className="min-h-screen bg-white dark:bg-neutral-950 text-ink dark:text-white transition-colors duration-300">
             <Navigation />
             <WhatsAppButton />
-            <main className="overflow-hidden">
-              <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="text-neutral-500">Carregando...</div></div>}>
+            <main>
+              <Suspense fallback={<Loader />}>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/secret" element={<SecretPage />} />

@@ -1,7 +1,12 @@
+import { useLocation } from 'react-router-dom';
+
 function WhatsAppButton() {
+  const location = useLocation();
   const phoneNumber = "351912074656";
   const message = "Olá! Gostaria de agendar um horário.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  if (location.pathname === '/secret') return null;
 
   return (
     <a
