@@ -16,16 +16,16 @@ function Navigation() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-neutral-200 dark:border-neutral-800 bg-white/90 dark:bg-neutral-950/90 backdrop-blur-lg">
       <div className="container flex items-center justify-between gap-6 py-4">
         <div className="w-11 lg:hidden" />
-        <a href="#inicio" className="lg:hidden absolute left-1/2 -translate-x-1/2">
+        <Link to="/" className="lg:hidden absolute left-1/2 -translate-x-1/2">
           <img src={logoIcon} alt="BoldMen's Salon" className="h-10 w-10 dark:invert-0 invert" />
-        </a>
+        </Link>
         <nav className="hidden items-center gap-8 text-[11px] uppercase tracking-[0.35em] text-neutral-600 dark:text-neutral-300 lg:flex">
-          <a
-            href="#inicio"
+          <Link
+            to="/"
             className="transition text-neutral-600 dark:text-neutral-300 hover:text-orange-500 dark:hover:text-orange-400"
           >
             {current.nav[0].label}
-          </a>
+          </Link>
           <Link
             to="/secret"
             className="transition hover:text-orange-500 animate-pulse text-orange-500"
@@ -115,13 +115,13 @@ function Navigation() {
           aria-modal="true"
         >
           <nav className="flex flex-col gap-4 text-xs uppercase tracking-[0.35em] text-neutral-700 dark:text-neutral-300">
-            <a
-              href="#inicio"
+            <Link
+              to="/"
               className="py-2 text-neutral-800 dark:text-neutral-200 transition hover:text-orange-500"
               onClick={() => setIsOpen(false)}
             >
               {current.nav[0].label}
-            </a>
+            </Link>
             <Link
               to="/secret"
               className="py-2 text-orange-500 transition hover:text-orange-400 animate-pulse"
