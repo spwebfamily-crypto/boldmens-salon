@@ -43,6 +43,8 @@ function Barbers() {
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   loading="lazy"
                   decoding="async"
+                  width="400"
+                  height="500"
                 />
                 <div
                   className="absolute inset-0 bg-gradient-to-t from-white/70 dark:from-neutral-900/70 via-transparent"

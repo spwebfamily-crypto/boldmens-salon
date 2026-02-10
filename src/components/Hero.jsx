@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "../contexts/LanguageContext";
 
 const heroImage =
-  "https://images.unsplash.com/photo-1507682226856-0e0b0a7a41e5?auto=format&fit=crop&w=1600&q=80";
+  "https://images.unsplash.com/photo-1507682226856-0e0b0a7a41e5?auto=format&fit=crop&w=1200&q=75";
 
 function Hero() {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -22,6 +22,20 @@ function Hero() {
         }}
         aria-hidden="true"
       />
+      <picture className="absolute inset-0">
+        <source
+          srcSet="https://images.unsplash.com/photo-1507682226856-0e0b0a7a41e5?auto=format&fit=crop&w=800&q=75 800w,
+                  https://images.unsplash.com/photo-1507682226856-0e0b0a7a41e5?auto=format&fit=crop&w=1200&q=75 1200w"
+          sizes="100vw"
+        />
+        <img
+          src={heroImage}
+          alt=""
+          className="h-full w-full object-cover"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </picture>
       <div
         className="absolute inset-0"
         style={{
@@ -114,6 +128,8 @@ function Hero() {
               playsInline
               preload="metadata"
               onLoadedData={() => setVideoLoaded(true)}
+              width="225"
+              height="400"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-transparent to-white/90" />
           </article>
@@ -135,6 +151,8 @@ function Hero() {
               playsInline
               preload="metadata"
               onLoadedData={() => setVideoLoaded(true)}
+              width="400"
+              height="711"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-transparent to-white/90" />
           </article>
