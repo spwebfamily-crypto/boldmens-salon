@@ -56,7 +56,7 @@ function SecretPage() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h1 className="text-5xl md:text-8xl font-bold text-neutral-900 dark:text-white tracking-tighter">
+          <h1 className="text-5xl md:text-8xl font-bold text-neutral-900 dark:text-white tracking-tighter md:dark:[text-shadow:0_0_40px_rgba(255,255,255,0.5),0_0_80px_rgba(255,255,255,0.3)]">
             BOLD COLLECTION
           </h1>
         </motion.div>
