@@ -8,7 +8,6 @@ import { LanguageProvider } from './contexts/LanguageContext';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { useTranslation } from './contexts/LanguageContext';
 
-const About = lazy(() => import('./components/About'));
 const GoogleReviews = lazy(() => import('./components/GoogleReviews'));
 const Services = lazy(() => import('./components/Services'));
 const Barbers = lazy(() => import('./components/Barbers'));
@@ -25,7 +24,6 @@ const HomePage = memo(function HomePage() {
     <>
       <Hero />
       <Suspense fallback={<Loader />}>
-        <About />
         <GoogleReviews />
         <Services items={t.services.items} />
         <Barbers />

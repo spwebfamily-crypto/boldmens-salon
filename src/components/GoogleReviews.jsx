@@ -1,33 +1,16 @@
-import { useEffect } from 'react';
+import { useEffect, memo } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from '../contexts/LanguageContext';
 
 function GoogleReviews() {
   const t = useTranslation();
-  
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://static.elfsight.com/platform/platform.js';
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-
-    return () => {
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
-
   const reviews = t.reviews.items;
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+      transition: { staggerChildren: 0.1 }
     }
   };
 
@@ -165,4 +148,4 @@ function GoogleReviews() {
   );
 }
 
-export default GoogleReviews;
+export default memo(GoogleReviews);

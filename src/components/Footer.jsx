@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../contexts/LanguageContext';
 
@@ -44,4 +45,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default memo(Footer);

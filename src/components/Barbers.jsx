@@ -1,3 +1,4 @@
+import { memo } from "react";
 import PropTypes from "prop-types";
 import { useTranslation } from "../contexts/LanguageContext";
 
@@ -74,4 +75,4 @@ function Barbers() {
 
 Barbers.propTypes = {};
 
-export default Barbers;
+export default memo(Barbers);

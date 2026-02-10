@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useTranslation } from "../contexts/LanguageContext";
 
 function CallToAction() {
@@ -70,4 +71,4 @@ function CallToAction() {
   );
 }
 
-export default CallToAction;
+export default memo(CallToAction);

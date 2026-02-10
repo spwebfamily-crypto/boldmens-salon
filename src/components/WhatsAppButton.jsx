@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useLocation } from 'react-router-dom';
 
 function WhatsAppButton() {
@@ -33,4 +34,4 @@ function WhatsAppButton() {
   );
 }
 
-export default WhatsAppButton;
+export default memo(WhatsAppButton);
