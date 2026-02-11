@@ -25,7 +25,7 @@ function Navigation() {
             }, 100);
           }}
         >
-          <img src={logoIcon} alt="BoldMen's Salon" className="h-10 w-10 dark:invert-0 invert" />
+          <img src={logoIcon} alt="BoldMen's Salon" className="h-12 w-12 dark:invert-0 invert object-contain" />
         </Link>
         <nav className="hidden items-center gap-8 text-[11px] uppercase tracking-[0.35em] text-neutral-600 dark:text-neutral-300 lg:flex">
           <Link

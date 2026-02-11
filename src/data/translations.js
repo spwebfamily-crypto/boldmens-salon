@@ -49,7 +49,7 @@ export const translations = {
       hoursTitle: "Horário de funcionamento",
       weekdays: "Segunda a sexta — 10h às 19h",
       saturday: "Sábado — 09h às 16h",
-      contactTitle: "Contato direto",
+      contactTitle: "Contacto direto",
       whatsapp: "WhatsApp corporativo:",
       responseTime: "Resposta média: 7 minutos.",
     },
@@ -113,9 +113,9 @@ export const translations = {
         },
         {
           id: "vitor-hugo",
-          name: "Vitor Hugo",
+          name: "Victor Hugo",
           role: "Hairstylist",
-          bio: "Vitor Hugo é barbeiro por profissão, apaixonado por futebol e vivendo o maior jogo da sua vida: a paternidade. Entre a tesoura afiada, o degradê bem feito e a resenha sobre o time do coração, entrega cortes precisos e atendimento de primeira. Aqui, o visual entra em campo com estilo, responsabilidade e aquela conversa boa de barbearia.",
+          bio: "Victor Hugo é barbeiro por profissão, apaixonado por futebol e vivendo o maior jogo da sua vida: a paternidade. Entre a tesoura afiada, o degradê bem feito e a resenha sobre o time do coração, entrega cortes precisos e atendimento de primeira. Aqui, o visual entra em campo com estilo, responsabilidade e aquela conversa boa de barbearia.",
           focus: "Hairstylist",
         },
       ],
@@ -344,7 +344,7 @@ export const translations = {
         },
         {
           id: "vitor-hugo",
-          name: "Vitor Hugo",
+          name: "Victor Hugo",
           role: "Barber",
           bio: "Specialist in clean fades, precision beards and hot towel finishes.",
           focus: "Skin fade & beard",
@@ -552,7 +552,7 @@ export const translations = {
         },
         {
           id: "vitor-hugo",
-          name: "Vitor Hugo",
+          name: "Victor Hugo",
           role: "Barber",
           bio: "Especialista en fades limpios, barbas de precisión y finalizaciones con toalla caliente.",
           focus: "Skin fade & barba",
@@ -760,7 +760,7 @@ export const translations = {
         },
         {
           id: "vitor-hugo",
-          name: "Витор Уго",
+          name: "Victor Hugo",
           role: "Barber",
           bio: "Специалист по чистым фейдам, точным бородам и финишам горячим полотенцем.",
           focus: "Фейд и борода",

@@ -144,7 +144,7 @@ function SecretPage() {
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-orange-500 dark:bg-orange-600 px-8 py-4 text-sm font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-orange-600 dark:hover:bg-orange-700 active:scale-95 w-fit"
                 >
                   <img src="/favicon.png" alt="BoldMen's" className="w-5 h-5 invert" />
-                  Contato
+                  Adquirir o seu
                 </a>
               </div>
             </motion.div>

@@ -31,7 +31,7 @@ function CallToAction() {
                 <span aria-hidden="true">&rarr;</span>
               </a>
               <a
-                href="mailto:contato@boldmens.co"
+                href="mailto:contacto@boldmens.co"
                 className="flex items-center justify-between rounded-full border border-neutral-900 dark:border-neutral-700 px-6 py-4 text-sm font-semibold uppercase tracking-[0.35em] text-neutral-900 dark:text-white transition hover:-translate-y-0.5 hover:border-orange-500 hover:text-orange-500"
               >
                 {t.cta.emailBtn}
@@ -55,7 +55,7 @@ function CallToAction() {
               </p>
               <p className="mt-2 text-sm text-neutral-800 dark:text-neutral-200">
                 {t.cta.whatsapp}
-                <span className="font-semibold text-orange-600 dark:text-orange-500">
+                <span className="font-semibold text-orange-600 dark:text-orange-500 whitespace-nowrap">
                   {" "}
                   +351 912 074 656
                 </span>

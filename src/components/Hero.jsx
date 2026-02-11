@@ -64,12 +64,12 @@ function Hero() {
             >
               {t.hero.bookBtn}
             </a>
-            <Link
-              to="/servicos"
+            <a
+              href="#servicos"
               className="inline-flex items-center justify-center rounded-full border border-neutral-900 dark:border-neutral-700 px-6 md:px-7 py-3 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] text-neutral-900 dark:text-neutral-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-orange-500 hover:text-orange-600 active:scale-95"
             >
               {t.hero.servicesBtn}
-            </Link>
+            </a>
           </div>
           <p className="text-xs uppercase tracking-[0.3em] text-neutral-500 dark:text-neutral-400">
             {t.hero.location}
