@@ -23,13 +23,13 @@ const GalleryItem = memo(function GalleryItem({ item, index, onVisible }) {
   return (
     <div
       ref={ref}
-      className="opacity-0 translate-y-8 transition-all duration-700 ease-out"
+      className="opacity-0 translate-y-8 transition-all duration-500 ease-out"
     >
       <figure className="group relative h-full overflow-hidden rounded-[32px] border border-neutral-200 bg-white shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-900">
         <img
           src={item.src}
           alt={item.alt}
-          className="aspect-[4/5] h-full w-full object-cover transition duration-500 group-hover:scale-105"
+          className="aspect-[4/5] h-full w-full object-cover transition duration-300 group-hover:scale-105"
           loading="lazy"
           decoding="async"
           width="400"

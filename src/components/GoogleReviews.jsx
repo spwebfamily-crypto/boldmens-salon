@@ -19,7 +19,7 @@ function GoogleReviews() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5 }
+      transition: { duration: 0.3 }
     }
   };
 
@@ -31,7 +31,7 @@ function GoogleReviews() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
         >
           <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.4em] text-orange-600 mb-4">
             <span className="h-px w-8 bg-orange-500" />
@@ -97,7 +97,7 @@ function GoogleReviews() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
         >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.844753!2d-9.3764911!3d38.6953615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ec5edf74664bd%3A0x4df25e3be83a61bd!2sBoldMen's%20Salon!5e0!3m2!1spt-PT!2spt!4v1234567890"
@@ -117,7 +117,7 @@ function GoogleReviews() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.6 }}
+          transition={{ delay: 0.1, duration: 0.4 }}
         >
           <a
             href="https://www.google.com/maps/dir/?api=1&destination=BoldMen%27s+Salon+R.+9+de+Abril+99,+2765-609+Estoril,+Portugal"

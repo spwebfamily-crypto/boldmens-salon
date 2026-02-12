@@ -35,13 +35,13 @@ function Barbers() {
           {t.team.members.map((member) => (
             <article
               key={member.id}
-              className="group flex flex-col overflow-hidden rounded-[32px] border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-md transition duration-500 hover:-translate-y-1 hover:shadow-lg"
+              className="group flex flex-col overflow-hidden rounded-[32px] border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="relative aspect-[4/5] overflow-hidden border-b border-neutral-200 dark:border-neutral-800">
                 <img
                   src={TEAM_IMAGES[member.id]}
                   alt={member.name}
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   loading="lazy"
                   decoding="async"
                   width="400"

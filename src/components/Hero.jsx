@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useTranslation } from "../contexts/LanguageContext";
 
-const heroImage = "https://images.unsplash.com/photo-1507682226856-0e0b0a7a41e5?auto=format&fit=crop&w=1200&q=75";
+const heroImage = "https://images.unsplash.com/photo-1507682226856-0e0b0a7a41e5?auto=format&fit=crop&w=800&q=60";
 
 const VideoCard = memo(function VideoCard({ onLoad }) {
   const videoRef = useRef(null);
@@ -30,7 +30,7 @@ const VideoCard = memo(function VideoCard({ onLoad }) {
       loop
       muted
       playsInline
-      preload="metadata"
+      preload="none"
       onLoadedData={onLoad}
       width="400"
       height="711"
@@ -61,7 +61,7 @@ function Hero() {
           className="space-y-6 md:space-y-10"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
         >
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.38em] text-neutral-600 dark:text-neutral-400">
             <span className="h-px w-10 bg-orange-500" />
@@ -95,7 +95,7 @@ function Hero() {
           className="flex gap-6 lg:hidden mt-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
+          transition={{ delay: 0.2, duration: 0.4 }}
         >
           <article className="relative flex-1 overflow-hidden rounded-[32px] border border-neutral-200 bg-white/80 shadow-lg aspect-[9/16] max-h-[400px]">
             {!videoLoaded && <div className="h-full w-full bg-neutral-100 animate-pulse" />}
@@ -107,7 +107,7 @@ function Hero() {
           className="hidden gap-6 lg:flex"
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
+          transition={{ delay: 0.15, duration: 0.4 }}
         >
           <article className="relative flex-1 overflow-hidden rounded-[40px] border border-neutral-200 bg-white/80 shadow-lg">
             {!videoLoaded && <div className="h-full w-full bg-neutral-100 animate-pulse" />}

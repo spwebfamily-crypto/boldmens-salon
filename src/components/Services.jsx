@@ -48,7 +48,7 @@ function Services({ items = [] }) {
               }}
               role="button"
               tabIndex={0}
-              className="group relative cursor-pointer overflow-hidden rounded-[32px] border border-neutral-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-orange-500 hover:shadow-[0_0_30px_rgba(249,115,22,0.6)] active:scale-[0.98] dark:border-neutral-800 dark:bg-neutral-900 dark:hover:shadow-[0_0_40px_rgba(249,115,22,0.8)]"
+              className="group relative cursor-pointer overflow-hidden rounded-[32px] border border-neutral-200 bg-white p-8 transition-all duration-200 hover:-translate-y-1 hover:border-orange-500 hover:shadow-[0_0_30px_rgba(249,115,22,0.6)] active:scale-[0.98] dark:border-neutral-800 dark:bg-neutral-900 dark:hover:shadow-[0_0_40px_rgba(249,115,22,0.8)]"
             >
               <div className="relative flex flex-col gap-4">
                 <div className="flex items-start justify-between gap-4">
@@ -101,13 +101,13 @@ function Services({ items = [] }) {
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
             >
               <motion.div 
                 className="mb-6 flex items-start justify-between gap-4"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1, duration: 0.3 }}
+                transition={{ delay: 0.05, duration: 0.2 }}
               >
                 <div>
                   <span className="inline-block rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-orange-600 dark:border-orange-900 dark:bg-orange-900/20 dark:text-orange-400">
@@ -126,7 +126,7 @@ function Services({ items = [] }) {
                   className="text-base leading-relaxed text-neutral-600 dark:text-neutral-300"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2, duration: 0.3 }}
+                  transition={{ delay: 0.1, duration: 0.2 }}
                 >
                   {selectedService.description}
                 </motion.p>
@@ -134,7 +134,7 @@ function Services({ items = [] }) {
                   className="rounded-2xl bg-neutral-50 p-5 dark:bg-neutral-800"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3, duration: 0.3 }}
+                  transition={{ delay: 0.15, duration: 0.2 }}
                 >
                   <h4 className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-neutral-900 dark:text-white">
                     {t.services.included}
@@ -146,7 +146,7 @@ function Services({ items = [] }) {
                         className="flex items-center gap-3"
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.4 + index * 0.05, duration: 0.3 }}
+                        transition={{ delay: 0.2 + index * 0.03, duration: 0.2 }}
                       >
                         <span className="h-1.5 w-1.5 rounded-full bg-orange-500" />
                         {item}
@@ -159,7 +159,7 @@ function Services({ items = [] }) {
                   className="flex w-full items-center justify-center rounded-full bg-neutral-900 py-4 text-sm font-semibold uppercase tracking-[0.35em] text-white transition hover:bg-orange-600 dark:bg-white dark:text-neutral-900 dark:hover:bg-orange-500 dark:hover:text-white"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5, duration: 0.3 }}
+                  transition={{ delay: 0.25, duration: 0.2 }}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >

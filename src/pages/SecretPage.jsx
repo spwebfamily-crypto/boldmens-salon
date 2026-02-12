@@ -141,9 +141,8 @@ function SecretPage() {
                   href="https://wa.me/351912074656?text=Ol%C3%A1%20tenho%20interesse%20de%20comprar%20pe%C3%A7as%20da%20cole%C3%A7%C3%A3o%20bold"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-orange-500 dark:bg-orange-600 px-8 py-4 text-sm font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-orange-600 dark:hover:bg-orange-700 active:scale-95 w-fit"
+                  className="inline-flex items-center justify-center rounded-full bg-orange-500 dark:bg-orange-600 px-8 py-4 text-sm font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-orange-600 dark:hover:bg-orange-700 active:scale-95 w-fit"
                 >
-                  <img src="/favicon.png" alt="BoldMen's" className="w-5 h-5 invert" />
                   Adquirir o seu
                 </a>
               </div>
