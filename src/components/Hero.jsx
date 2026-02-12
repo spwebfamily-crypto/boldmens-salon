@@ -1,4 +1,4 @@
-import { useState, memo } from "react";
+import { useState, memo, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useTranslation } from "../contexts/LanguageContext";
@@ -6,8 +6,24 @@ import { useTranslation } from "../contexts/LanguageContext";
 const heroImage = "https://images.unsplash.com/photo-1507682226856-0e0b0a7a41e5?auto=format&fit=crop&w=1200&q=75";
 
 const VideoCard = memo(function VideoCard({ onLoad }) {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleEnded = () => {
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    };
+
+    video.addEventListener('ended', handleEnded);
+    return () => video.removeEventListener('ended', handleEnded);
+  }, []);
+
   return (
     <video
+      ref={videoRef}
       src="/boldmens-logo.mp4"
       className="h-full w-full object-cover"
       autoPlay
