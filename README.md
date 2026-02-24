@@ -1,4 +1,4 @@
-# ✂️ Bold Men's Salon - Premium Barbershop Website
+# ✂️ Bold Men's
 
 > A modern, elegant, and fully responsive website for a premium men's barbershop, featuring dark mode, multilingual support, and smooth animations.
 
