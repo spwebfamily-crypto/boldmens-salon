@@ -25,39 +25,6 @@
 - **Animations:** Framer Motion 12.33
 - **Code Quality:** ESLint
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js (v16 or higher)
-- npm or yarn
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/boldmens-salon.git
-
-# Navigate to project directory
-cd boldmens-salon
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-### Build for Production
-
-```bash
-# Create optimized production build
-npm run build
-
-# Preview production build
-npm run preview
-```
-
 ## 📁 Project Structure
 
 ```
