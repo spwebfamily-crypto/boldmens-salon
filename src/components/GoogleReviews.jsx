@@ -76,7 +76,7 @@ function GoogleReviews() {
                   {avatar}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="font-semibold text-neutral-900 dark:text-white text-sm md:text-base truncate">{review.name}</p>
+                  <p className="font-semibold !text-neutral-900 dark:!text-white text-sm md:text-base truncate">{review.name}</p>
                   <p className="text-xs text-neutral-500 dark:text-neutral-400">{review.date}</p>
                 </div>
               </div>
