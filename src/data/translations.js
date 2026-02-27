@@ -385,45 +385,68 @@ export const translations = {
       items: [
         {
           id: 'haircut',
-          title: 'Signature haircut',
-          description: 'Initial consultation, structured scissor cut and finishing with Bold Mens signature products.',
+          title: 'Haircut',
+          description: 'Discover a tailor-made look through a consultation that aligns your style with expert curation. Every detail is designed to enhance your identity, delivering a personalized, modern and elegant haircut.',
           duration: '50 min',
-          price: '€45',
+          price: '€19',
+        },
+        {
+          id: 'combo-haircut-shave',
+          title: 'Haircut & Classic shave',
+          description: 'Enjoy complete care with a personalized haircut and a classic hot towel shave. Every detail is finished with precision, razor-sharp contours and an elegant finish. We use selected products to elevate your style while respecting your personality.',
+          duration: '1h 20min',
+          price: '€29',
+          includedServices: [
+            { name: 'Classic hot towel shave', duration: '30 min' },
+            { name: 'Haircut', duration: '50 min' }
+          ]
+        },
+        {
+          id: 'brows-straight-razor',
+          title: 'Eyebrows (straight razor)',
+          description: 'Trim, alignment and eyebrow finishing.',
+          duration: '15 min',
+          price: '€5',
         },
         {
           id: 'hot-towel-shave',
           title: 'Classic hot towel shave',
-          description: 'Straight razor, hot towels and essential oil blend followed by moisturizing mask and cold towel.',
+          description: 'Classic straight razor shave with hot towel, followed by selected products and finished with a cold towel, moisturizer and aftershave.',
           duration: '30 min',
-          price: '€35',
+          price: '€16',
         },
         {
-          id: 'hair-finish',
-          title: 'Hair finishing',
-          description: 'Quick touch-up of contours and styling for immediate appointments.',
-          duration: '15 min',
-          price: '€18',
+          id: 'detox-facial-fullshave',
+          title: 'Facial detox + Full shave',
+          description: 'Complete facial detox treatment with black mask followed by a classic hot towel shave for a full care experience.',
+          duration: '1h 10min',
+          price: '€31',
+          includedServices: [
+            { name: 'Facial detox with black mask', duration: '40 min' },
+            { name: 'Classic hot towel shave', duration: '30 min' }
+          ]
         },
         {
-          id: 'brows-straight-razor',
-          title: 'Eyebrows with straight razor',
-          description: 'Design, alignment and finishing with straight razor for a precise look.',
-          duration: '15 min',
-          price: '€15',
-        },
-        {
-          id: 'buzz-cut',
-          title: 'Complete buzz cut',
-          description: 'Clipper with single guard chosen by client and blade finishing.',
+          id: 'combo-brows-contours',
+          title: 'Eyebrows (straight razor) & Contours',
+          description: 'Trim, alignment and finishing of eyebrows and hairline detailing.',
           duration: '30 min',
-          price: '€30',
+          price: '€8',
+          includedServices: [
+            { name: 'Eyebrows (straight razor)', duration: '15 min' },
+            { name: 'Hairline detailing', duration: '15 min' }
+          ]
         },
         {
-          id: 'nose-wax',
-          title: 'Nose waxing',
-          description: 'Comfortable removal with hot wax and soothing application.',
-          duration: '20 min',
-          price: '€20',
+          id: 'buzz-cut-barber',
+          title: 'Buzz cut & Classic barber shave',
+          description: 'Start with a haircut using your preferred guard, followed by a beard trim with hot towel and precise razor contour detailing. We finish with professional styling and curated touches to elevate your unique look.',
+          duration: '1h',
+          price: '€25',
+          includedServices: [
+            { name: 'Classic hot towel shave', duration: '30 min' },
+            { name: 'Buzz cut (single guard all over)', duration: '30 min' }
+          ]
         },
       ]
     },
@@ -593,45 +616,68 @@ export const translations = {
       items: [
         {
           id: 'haircut',
-          title: 'Corte signature',
-          description: 'Consultoría inicial, corte estructurado con tijera y finalización con productos de autor Bold Mens.',
+          title: 'Corte de cabello',
+          description: 'Descubre un look a medida a través de una consultoría que une tu estilo con una curaduría especializada. Cada detalle está pensado para resaltar tu identidad con un corte personalizado, moderno y elegante.',
           duration: '50 min',
-          price: '€45',
+          price: '€19',
+        },
+        {
+          id: 'combo-haircut-shave',
+          title: 'Corte de cabello & Afeitado clásico',
+          description: 'Disfruta de un cuidado completo con corte de cabello personalizado y afeitado clásico con toalla caliente. Cada detalle se finaliza con precisión, contornos a navaja y un acabado elegante. Usamos productos seleccionados para potenciar tu estilo y respetar tu personalidad.',
+          duration: '1h 20min',
+          price: '€29',
+          includedServices: [
+            { name: 'Afeitado clásico con toalla caliente', duration: '30 min' },
+            { name: 'Corte de cabello', duration: '50 min' }
+          ]
+        },
+        {
+          id: 'brows-straight-razor',
+          title: 'Cejas (navaja)',
+          description: 'Recorte, alineación y finalización de cejas.',
+          duration: '15 min',
+          price: '€5',
         },
         {
           id: 'hot-towel-shave',
           title: 'Afeitado clásico con toalla caliente',
-          description: 'Navaja, toallas calientes y mezcla de aceites esenciales seguidos de máscara hidratante y toalla fría.',
+          description: 'Afeitado clásico con navaja y toalla caliente, seguido de una selección de productos y finalizado con toalla fría, hidratante y aftershave.',
           duration: '30 min',
-          price: '€35',
+          price: '€16',
         },
         {
-          id: 'hair-finish',
-          title: 'Acabado de cabello',
-          description: 'Retoque rápido de contornos y styling para compromisos inmediatos.',
-          duration: '15 min',
-          price: '€18',
+          id: 'detox-facial-fullshave',
+          title: 'Detox facial + Barba fullshave',
+          description: 'Tratamiento completo de detox facial con black mask, seguido de afeitado clásico con toalla caliente para una experiencia de cuidado total.',
+          duration: '1h 10min',
+          price: '€31',
+          includedServices: [
+            { name: 'Detox facial con black mask', duration: '40 min' },
+            { name: 'Afeitado clásico con toalla caliente', duration: '30 min' }
+          ]
         },
         {
-          id: 'brows-straight-razor',
-          title: 'Cejas con navaja',
-          description: 'Diseño, alineación y finalización con navaja para una mirada precisa.',
-          duration: '15 min',
-          price: '€15',
-        },
-        {
-          id: 'buzz-cut',
-          title: 'Buzz cut completo',
-          description: 'Máquina con peine único elegido por el cliente y acabado con cuchilla.',
+          id: 'combo-brows-contours',
+          title: 'Cejas (navaja) & Contornos',
+          description: 'Recorte, alineación y finalización de cejas y acabados de cabello.',
           duration: '30 min',
-          price: '€30',
+          price: '€8',
+          includedServices: [
+            { name: 'Cejas (navaja)', duration: '15 min' },
+            { name: 'Acabados de cabello', duration: '15 min' }
+          ]
         },
         {
-          id: 'nose-wax',
-          title: 'Depilación nasal',
-          description: 'Remoción cómoda con cera caliente y aplicación calmante.',
-          duration: '20 min',
-          price: '€20',
+          id: 'buzz-cut-barber',
+          title: 'Buzz cut & Barber clásico',
+          description: 'Empieza con un corte de cabello usando el peine de tu elección, seguido de arreglo de barba con toalla caliente y contornos precisos con navaja. Finalizamos con estilización profesional y una curaduría para potenciar tu look único.',
+          duration: '1h',
+          price: '€25',
+          includedServices: [
+            { name: 'Afeitado clásico con toalla caliente', duration: '30 min' },
+            { name: 'Buzz cut (un peine en todo)', duration: '30 min' }
+          ]
         },
       ]
     },
@@ -801,45 +847,68 @@ export const translations = {
       items: [
         {
           id: 'haircut',
-          title: 'Авторская стрижка',
-          description: 'Первоначальная консультация, структурированная стрижка ножницами и финиш авторскими продуктами Bold Mens.',
+          title: 'Стрижка',
+          description: 'Индивидуальная консультация и персональный стиль. Каждая деталь продумана, чтобы подчеркнуть вашу индивидуальность современным и элегантным образом.',
           duration: '50 мин',
-          price: '€45',
+          price: '€19',
+        },
+        {
+          id: 'combo-haircut-shave',
+          title: 'Стрижка и классическое бритье',
+          description: 'Полный уход: персональная стрижка и классическое бритье с горячим полотенцем. Точные контуры, аккуратная отделка и подобранные продукты для вашего стиля.',
+          duration: '1h 20min',
+          price: '€29',
+          includedServices: [
+            { name: 'Классическое бритье с горячим полотенцем', duration: '30 мин' },
+            { name: 'Стрижка', duration: '50 мин' }
+          ]
+        },
+        {
+          id: 'brows-straight-razor',
+          title: 'Брови (опасная бритва)',
+          description: 'Подравнивание, выравнивание и финиш бровей.',
+          duration: '15 мин',
+          price: '€5',
         },
         {
           id: 'hot-towel-shave',
           title: 'Классическое бритье с горячим полотенцем',
-          description: 'Опасная бритва, горячие полотенца и смесь эфирных масел, затем увлажняющая маска и холодное полотенце.',
+          description: 'Классическое бритье опасной бритвой с горячим полотенцем, подбором продуктов и финалом с холодным полотенцем, увлажнением и aftershave.',
           duration: '30 мин',
-          price: '€35',
+          price: '€16',
         },
         {
-          id: 'hair-finish',
-          title: 'Финиш волос',
-          description: 'Быстрая коррекция контуров и укладка для срочных встреч.',
-          duration: '15 мин',
-          price: '€18',
+          id: 'detox-facial-fullshave',
+          title: 'Детокс лица + Full shave',
+          description: 'Полный детокс-уход за лицом с black mask, затем классическое бритье с горячим полотенцем для комплексного ухода.',
+          duration: '1h 10min',
+          price: '€31',
+          includedServices: [
+            { name: 'Детокс лица с black mask', duration: '40 мин' },
+            { name: 'Классическое бритье с горячим полотенцем', duration: '30 мин' }
+          ]
         },
         {
-          id: 'brows-straight-razor',
-          title: 'Брови опасной бритвой',
-          description: 'Дизайн, выравнивание и финиш опасной бритвой для точного взгляда.',
-          duration: '15 мин',
-          price: '€15',
-        },
-        {
-          id: 'buzz-cut',
-          title: 'Полный buzz cut',
-          description: 'Машинка с одной насадкой по выбору клиента и финиш лезвием.',
+          id: 'combo-brows-contours',
+          title: 'Брови (опасная бритва) и контуры',
+          description: 'Подравнивание, выравнивание и финал бровей, а также контуры прически.',
           duration: '30 мин',
-          price: '€30',
+          price: '€8',
+          includedServices: [
+            { name: 'Брови (опасная бритва)', duration: '15 мин' },
+            { name: 'Контуры прически', duration: '15 мин' }
+          ]
         },
         {
-          id: 'nose-wax',
-          title: 'Депиляция носа',
-          description: 'Комфортное удаление горячим воском и успокаивающее нанесение.',
-          duration: '20 мин',
-          price: '€20',
+          id: 'buzz-cut-barber',
+          title: 'Buzz cut и классическое бритье',
+          description: 'Стрижка машинкой с выбранной насадкой, затем уход за бородой с горячим полотенцем и точные контуры бритвой. Финал с профессиональной укладкой и акцентом на ваш стиль.',
+          duration: '1h',
+          price: '€25',
+          includedServices: [
+            { name: 'Классическое бритье с горячим полотенцем', duration: '30 мин' },
+            { name: 'Buzz cut (одна насадка по всей голове)', duration: '30 мин' }
+          ]
         },
       ]
     },
