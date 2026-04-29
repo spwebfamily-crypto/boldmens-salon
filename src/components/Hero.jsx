@@ -76,13 +76,13 @@ function Hero() {
           <div className="flex flex-col sm:flex-row flex-wrap gap-3">
             <a
               href="https://www.fresha.com/pt/a/boldmens-salon-estoril-rua-9-de-abril-99a-nat7n6mn/booking?allOffer=true&pId=832755&cartId=6344b719-9962-47ce-bf23-c346cbe5086b"
-              className="inline-flex items-center justify-center rounded-full bg-neutral-900 dark:bg-orange-600 px-6 md:px-7 py-3 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-orange-500 active:scale-95"
+              className="inline-flex items-center justify-center rounded-full bg-neutral-900 dark:bg-orange-600 px-6 md:px-7 py-3 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-orange-500 hover:text-white active:scale-95"
             >
               {t.hero.bookBtn}
             </a>
             <a
               href="#servicos"
-              className="inline-flex items-center justify-center rounded-full border border-neutral-900 dark:border-neutral-700 px-6 md:px-7 py-3 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] text-neutral-900 dark:text-neutral-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-orange-500 hover:text-orange-600 active:scale-95"
+              className="inline-flex items-center justify-center rounded-full border border-neutral-900 dark:border-neutral-700 px-6 md:px-7 py-3 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] text-neutral-900 dark:text-neutral-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-orange-500 hover:text-orange-600 dark:hover:text-orange-400 active:scale-95"
             >
               {t.hero.servicesBtn}
             </a>
