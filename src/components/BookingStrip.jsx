@@ -93,7 +93,7 @@ function BookingStrip() {
             href="https://www.google.com/maps/dir/?api=1&destination=BoldMen%27s+Salon+R.+9+de+Abril+99,+2765-609+Estoril,+Portugal"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 rounded-full bg-neutral-900 px-8 py-4 text-xs font-semibold uppercase tracking-[0.3em] text-white shadow-lg transition hover:-translate-y-1 hover:bg-orange-500 hover:!text-white"
+            className="flex items-center gap-3 rounded-full bg-neutral-900 px-8 py-4 text-xs font-semibold uppercase tracking-[0.3em] text-white shadow-lg transition hover:-translate-y-1 hover:bg-orange-500 [&:hover]:text-white [&:hover_svg]:stroke-white"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ function BookingStrip() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="h-5 w-5 hover:stroke-white"
+              className="h-5 w-5"
             >
               <path
                 strokeLinecap="round"
